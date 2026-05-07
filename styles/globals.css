@@ -5,6 +5,7 @@
     --background: #f9f9f7;
     --foreground: #071108;
     --primary: #034732;
+    --secondary: #e5f2e1;
     --accent: #d4af37;
     --secondary-accent: #cea972;
     --font-heading: var(--cormorant-garamond);
@@ -22,6 +23,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
+  --color-primaryAccent: var(--secondary);
   --color-accent: var(--accent);
   --color-secondary: var(--secondary-accent);
 }
