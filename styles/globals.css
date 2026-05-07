@@ -13,9 +13,46 @@
   }
 
   /* FONTS VARIABLES  */
+  /*  Heading */
   .font-heading-bold {
     font-family: var(--font-heading);
     font-weight: 700;
+  }
+
+  .font-heading-semibold {
+    font-family: var(--font-heading);
+    font-weight: 600;
+  }
+
+  .font-heading-medium {
+    font-family: var(--font-heading);
+    font-weight: 500;
+  }
+
+  .font-heading-normal {
+    font-family: var(--font-heading);
+    font-weight: 400;
+  }
+
+  /* Body */
+  .font-body-bold {
+    font-family: var(--font-body);
+    font-weight: 700;
+  }
+
+  .font-body-semibold {
+    font-family: var(--font-body);
+    font-weight: 600;
+  }
+
+  .font-body-medium {
+    font-family: var(--font-body);
+    font-weight: 500;
+  }
+
+  .font-body-normal {
+    font-family: var(--font-body);
+    font-weight: 400;
   }
 }
 

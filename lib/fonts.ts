@@ -9,7 +9,7 @@ export const cormorantGaramond = Cormorant_Garamond({
 
 export const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400", "500", "600", "700"],
   variable: "--inter",
   display: "swap",
 });
