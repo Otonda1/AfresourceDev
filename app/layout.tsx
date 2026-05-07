@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { cormorantGaramond, inter } from "@/lib/fonts";
 import "@/styles/globals.css";
+import Navbar from "@/components/layout/Navbar";
 
 export const metadata: Metadata = {
   title: "Afresource Network Ltd | People & Organizational Advisory in Africa",
@@ -18,7 +19,10 @@ export default function RootLayout({
       lang="en"
       className={` ${cormorantGaramond.variable} ${inter.variable} antialiased`}
     >
-      <body className="min-h-full bg-background">{children}</body>
+      <body className="bg-background">
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
