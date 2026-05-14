@@ -20,7 +20,6 @@ export default function Home() {
         <InstitutionalEcosystem />
         <ExperienceSpecialization />
         <CTA />
-        <Footer />
       </main>
     </>
   );

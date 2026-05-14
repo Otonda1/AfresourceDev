@@ -55,7 +55,7 @@ export default function Capabilities() {
             href="/services"
             className="group inline-flex shrink-0 items-center gap-2 font-body-semibold text-sm uppercase tracking-[0.15em] text-accent transition-colors duration-200 hover:text-secondary"
           >
-            View All Services
+            View Services
             <span className="transition-transform duration-200 group-hover:translate-x-1">
               ↗
             </span>
@@ -76,10 +76,7 @@ export default function Capabilities() {
                 ease: "easeOut",
               }}
             >
-              <Link
-                href={capability.href}
-                className="group flex h-full min-h-80 flex-col justify-between border border-white/10 bg-white/2 p-8 transition-all duration-300 hover:border-accent/30 hover:bg-white/4 md:p-10"
-              >
+              <div className="group flex h-full min-h-80 flex-col justify-between border border-white/10 bg-white/2 p-8 transition-all duration-300 hover:border-accent/30 hover:bg-white/4 md:p-10">
                 <div>
                   <h3 className="font-heading-medium text-xl italic text-background md:text-2xl">
                     {capability.title}
@@ -88,13 +85,7 @@ export default function Capabilities() {
                     {capability.description}
                   </p>
                 </div>
-
-                <div className="mt-10 flex items-center">
-                  <span className="text-accent transition-transform duration-300 group-hover:translate-x-2">
-                    →
-                  </span>
-                </div>
-              </Link>
+              </div>
             </motion.div>
           ))}
         </div>

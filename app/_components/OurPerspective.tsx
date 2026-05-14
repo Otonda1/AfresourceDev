@@ -9,7 +9,7 @@ export default function OurPerspective() {
         <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-16">
           {/* Left Column — Heading */}
           <motion.div
-            className="lg:col-span-4"
+            className="lg:col-span-6"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -29,7 +29,7 @@ export default function OurPerspective() {
           </motion.div>
 
           {/* Right Column — Content */}
-          <div className="lg:col-span-8 space-y-8">
+          <div className="lg:col-span-6 space-y-8">
             <motion.p
               className="font-body-normal text-lg leading-relaxed text-foreground/90 md:text-xl max-w-2xl"
               initial={{ opacity: 0, y: 20 }}

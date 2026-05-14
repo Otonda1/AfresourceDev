@@ -26,7 +26,7 @@ const companyLinks = [
 export default function Footer() {
   return (
     <footer className="border-t border-foreground/10 bg-background">
-      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+      <div className="mx-auto max-w-7xl px-4 pt-16 pb-8 sm:px-6 lg:px-8 lg:pt-32">
         {/* Main Footer Grid */}
         <motion.div
           className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-12 lg:gap-8"
@@ -41,8 +41,8 @@ export default function Footer() {
               <Image
                 src="/logo/Afresource_Primary_Green.png"
                 alt="Afresource"
-                width={160}
-                height={40}
+                width={1280}
+                height={315}
               />
             </Link>
             <p className="mt-5 max-w-xs font-body-normal text-sm leading-relaxed text-foreground/60">

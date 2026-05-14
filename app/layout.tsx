@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { cormorantGaramond, inter } from "@/lib/fonts";
 import "@/styles/globals.css";
 import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   title: "Afresource Network Ltd | People & Organizational Advisory in Africa",
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body className="bg-background">
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

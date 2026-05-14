@@ -1,5 +1,11 @@
+import ContactSection from "./sections/ContactSection";
+
 const Contact = () => {
-  return "Contact Page";
+  return (
+    <>
+      <ContactSection />
+    </>
+  );
 };
 
 export default Contact;
