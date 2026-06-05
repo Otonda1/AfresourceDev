@@ -11,7 +11,7 @@ export default function InsightsHero() {
           {/* Left Column — Content */}
           <div className="space-y-6">
             <motion.span
-              className="font-body-semibold text-xs uppercase tracking-[0.2em] text-accent"
+              className="inline-block border-l-2 border-accent pl-4 font-body-semibold text-xs uppercase tracking-[0.2em] text-accent"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
@@ -20,25 +20,25 @@ export default function InsightsHero() {
             </motion.span>
 
             <motion.h1
-              className="font-heading-bold text-4xl italic text-primary md:text-5xl lg:text-[3.5rem] lg:leading-[1.1]"
+              className="mt-8 font-heading-bold text-4xl italic text-primary md:text-5xl lg:text-[3.5rem] lg:leading-[1.1]"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
             >
-              Insights forged in operation.
+              Practical reflections on people systems, structure, and
+              performance.
             </motion.h1>
 
             <motion.p
-              className="max-w-lg font-body-normal text-base leading-relaxed text-foreground/80 md:text-lg"
+              className="mt-8 max-w-xl font-body-normal leading-relaxed text-foreground md:text-lg"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
             >
-              At Afresource Network Ltd, we do not believe in theoretical
-              frameworks divorced from reality. Our perspectives are drawn from
-              the intricate ways Pan-African organizations actually operate—the
-              unspoken hierarchies, the cultural nuances of governance, and the
-              friction points of rapid transition.
+              Afresource shares perspectives drawn from real organizational
+              experience — exploring how people systems, governance,
+              transitions, and organizational clarity shape performance over
+              time.
             </motion.p>
           </div>
 
