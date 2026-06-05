@@ -2,13 +2,28 @@ import sharp from "sharp";
 import { lexicalEditor } from "@payloadcms/richtext-lexical";
 import { postgresAdapter } from "@payloadcms/db-postgres";
 import { buildConfig } from "payload";
+import { Homepage } from "./cms/globals/Homepage";
 
 export default buildConfig({
+  admin: {
+    user: "admins",
+    meta: {
+      titleSuffix: "— Afresource CMS",
+    },
+  },
   // If you'd like to use Rich Text, pass your editor here
   editor: lexicalEditor(),
 
+  globals: [Homepage],
+
   // Define and configure your collections in this array
-  collections: [],
+  collections: [
+    {
+      slug: "admins",
+      auth: true,
+      fields: [],
+    },
+  ],
 
   // Your Payload secret - should be a complex and secure string, unguessable
   secret: process.env.PAYLOAD_SECRET || "",

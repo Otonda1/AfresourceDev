@@ -5,7 +5,22 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Hero() {
+interface HeroProps {
+  data: {
+    headline: string;
+    subheadline: string;
+    primaryCta: {
+      label: string;
+      href: string;
+    };
+    secondaryCta: {
+      label: string;
+      href: string;
+    };
+  };
+}
+
+export default function Hero({ data }: HeroProps) {
   return (
     <section className="bg-background">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -29,7 +44,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
             >
-              Advisory for structured, effective organizations.
+              {data.headline}
             </motion.h1>
 
             {/* Description */}

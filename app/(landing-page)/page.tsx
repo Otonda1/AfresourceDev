@@ -1,4 +1,3 @@
-import Footer from "@/components/layout/Footer";
 import Capabilities from "./_components/Capabilities";
 import CTA from "./_components/CTA";
 import ExperienceSpecialization from "./_components/ExperienceSpecialization";
@@ -8,11 +7,22 @@ import OurPerspective from "./_components/OurPerspective";
 import OurProcess from "./_components/OurProcess";
 import ValueProposition from "./_components/ValueProposition";
 
-export default function Home() {
+import { getPayload } from "payload";
+import config from "@payload-config";
+
+export default async function Home() {
+  const payload = await getPayload({ config });
+
+  const hompage = await payload.findGlobal({
+    slug: "homepage",
+  });
+
+  console.log(hompage.hero);
+
   return (
     <>
       <main className="">
-        <Hero />
+        <Hero data={hompage.hero} />
         <OurPerspective />
         <Capabilities />
         <ValueProposition />
