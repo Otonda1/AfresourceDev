@@ -2,67 +2,79 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[#0f1f15]">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 items-center gap-12 py-20 md:py-28 lg:grid-cols-2 lg:gap-16 lg:py-32">
-          {/* Left Column — Content */}
-          <div className="flex flex-col items-start space-y-8">
+    <section className="relative min-h-[90vh] overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <Image
+          src="/about/about-hero-2.png"
+          alt="Abstract architectural detail showing intersecting lines and planes, representing structured systems and clarity"
+          fill
+          className="object-cover"
+          priority
+        />
+        {/* Green overlay for text contrast */}
+        <div className="absolute inset-0 bg-linear-to-r from-primary/90 via-primary/70 to-primary/40" />
+      </div>
+
+      <div className="relative z-10 flex min-h-[90vh] items-center">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
             <motion.span
-              className="font-body-semibold text-xs uppercase tracking-[0.2em] text-accent"
+              className="inline-block border-l-2 border-accent pl-4 font-body-semibold text-xs uppercase tracking-[0.2em] text-accent"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
             >
-              Architectural Intelligence
+              Institutional Advisory
             </motion.span>
 
             <motion.h1
-              className="font-heading-bold text-4xl text-background md:text-5xl lg:text-[3.25rem] xl:text-[3.75rem] lg:leading-[1.15]"
+              className="mt-8 font-heading-bold text-4xl italic text-background md:text-5xl lg:text-[3.75rem] lg:leading-[1.1]"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
             >
-              Systems Thinking for African Institutions.
+              People succeed when systems support them.
             </motion.h1>
 
             <motion.p
-              className="max-w-lg font-body-normal text-base leading-relaxed text-background/70 md:text-lg"
+              className="mt-8 max-w-xl font-body-normal text-base leading-relaxed text-background/70 md:text-lg"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
             >
-              We architect institutional resilience through deep partnership.
-              Afresource Network provides the structural blueprint for
-              organizations that require more than just solutions—they require
-              intelligence.
+              Afresource helps organizations design the structures, processes,
+              and people systems that create clarity, consistency, and
+              sustainable performance.
             </motion.p>
-          </div>
 
-          {/* Right Column — Image */}
-          <motion.div
-            className="relative"
-            initial={{ opacity: 0, scale: 0.98 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-          >
-            <div className="relative overflow-hidden">
-              <Image
-                src="/about/about-hero.png"
-                alt="Architectural blueprint overlay representing institutional systems"
-                width={1536}
-                height={1024}
-                className="h-auto w-full object-cover"
-                priority
-              />
-              {/* Subtle gradient overlay for depth */}
-              <div className="absolute inset-0 bg-linear-to-t from-[#0f1f15]/40 via-transparent to-transparent" />
-            </div>
-          </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.45, ease: "easeOut" }}
+              className="mt-10"
+            >
+              <Link
+                href="/services"
+                className="group inline-flex items-center gap-3 text-background transition-colors duration-200 hover:text-accent"
+              >
+                <span className="font-body-semibold text-sm uppercase tracking-[0.15em]">
+                  Explore Our Approach
+                </span>
+                <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-2" />
+              </Link>
+            </motion.div>
+          </div>
         </div>
       </div>
+
+      {/* Bottom accent line */}
+      <div className="absolute bottom-12 right-12 hidden h-px w-64 bg-accent/50 lg:block" />
     </section>
   );
 }
