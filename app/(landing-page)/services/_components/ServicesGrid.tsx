@@ -10,7 +10,7 @@ const services = [
     icon: Users,
     title: "People Infrastructure",
     description:
-      "Developing the human capital architecture necessary for scalable cross-continental operations and high-performance cultures.",
+      "Designing and strengthening onboarding, mobility, performance, recognition, and employee lifecycle systems that support clarity, consistency, and organizational effectiveness.",
     tags: ["Talent Strategy", "Culture Mapping"],
     variant: "white" as const,
   },
@@ -19,7 +19,7 @@ const services = [
     icon: Network,
     title: "Organizational Structure",
     description:
-      "Re-engineering workflows and reporting hierarchies to eliminate friction in complex jurisdictional environments.",
+      "Clarifying roles, responsibilities, reporting lines, and ways of working so teams can operate with stronger alignment and accountability.",
     variant: "dark" as const,
   },
   {
@@ -27,7 +27,7 @@ const services = [
     icon: Landmark,
     title: "Governance Systems",
     description:
-      "Institutionalizing transparency and compliance through bespoke advisory frameworks.",
+      "Developing practical frameworks that support consistent, transparent, and well-informed decision-making across the organization.",
     image: "/boardroom.jpg",
     variant: "image" as const,
   },
@@ -36,7 +36,7 @@ const services = [
     icon: TrendingUp,
     title: "Sustainable Growth Advisory",
     description:
-      "We align ESG transformation with profitability, ensuring your pan-African expansion is both resilient and ethically sound in a changing global landscape.",
+      "Supporting organizations to scale people systems, strengthen organizational effectiveness, and build structures that can support long-term growth.",
     cta: { label: "View Frameworks", href: "/services/sustainable-growth" },
     variant: "light" as const,
   },

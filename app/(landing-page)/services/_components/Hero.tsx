@@ -2,6 +2,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function ServicesHero() {
   return (
@@ -22,7 +23,7 @@ export default function ServicesHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
         >
-          Architecture for Growth and African Excellence.
+          Services designed around how organizations actually work.
         </motion.h1>
 
         <motion.div
@@ -32,13 +33,33 @@ export default function ServicesHero() {
           transition={{ duration: 0.7, delay: 0.35, ease: "easeOut" }}
         >
           <p className="font-body-normal text-base leading-relaxed text-foreground/80 md:text-lg">
-            We specialize in the structural alignment of pan-African
-            enterprises. By integrating governance, people, and sustainable
-            frameworks, we build the infrastructure required for high-stakes
-            advisory and long-term institutional stability.
+            Afresource helps organizations design and strengthen people systems,
+            organizational structures, and governance frameworks that support
+            clarity, consistency, and sustainable performance.
           </p>
+        </motion.div>
+        <motion.div
+          className="mt-10 flex flex-wrap gap-4"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+        >
+          <Link
+            href="/contact"
+            className="inline-block bg-accent px-8 py-4 font-body-semibold text-sm uppercase tracking-[0.15em] text-foreground transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+          >
+            Start a Conversation
+          </Link>
+          <Link
+            href="/insights"
+            className="inline-block border border-foreground/20 px-8 py-4 font-body-semibold text-sm uppercase tracking-[0.15em] text-foreground transition-all duration-300 hover:border-primary hover:text-primary"
+          >
+            Explore Our Approach
+          </Link>
         </motion.div>
       </div>
     </section>
   );
 }
+
+//  className="mt-12 max-w-2xl border-l-2 border-secondary pl-8 md:mt-16 md:pl-10"
