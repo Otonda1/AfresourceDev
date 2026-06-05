@@ -37,10 +37,12 @@ export default function OurPerspective() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
             >
-              We believe that sustainable organizational growth is not merely a
-              financial outcome, but a structural achievement. In the
-              Pan-African context, performance is built upon high-trust systems
-              and a deep understanding of people infrastructure.
+              Organizations perform best when people are supported by systems
+              that are clear, practical, and aligned to how work actually
+              happens. As organizations grow, transition, or become more
+              complex, informal ways of working often begin to create gaps — in
+              onboarding, performance, decision-making, mobility, recognition,
+              and accountability.
             </motion.p>
 
             <motion.p
@@ -50,10 +52,9 @@ export default function OurPerspective() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
             >
-              Afresource Network Ltd bridges the gap between ambitious vision
-              and operational reality. We design the frameworks that empower
-              leadership, ensure transparency, and transform talent into a
-              competitive advantage.
+              Afresource helps organizations strengthen these underlying systems
+              so people can operate with greater clarity, consistency, and
+              effectiveness.
             </motion.p>
             <motion.div
               initial={{ opacity: 0 }}

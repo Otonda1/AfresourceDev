@@ -66,17 +66,17 @@ export default function Hero({ data }: HeroProps) {
               transition={{ duration: 0.7, delay: 0.45, ease: "easeOut" }}
             >
               <Link
-                href="/services"
+                href="/contact"
                 className="inline-flex items-center bg-accent px-8 py-3.5 text-sm font-body-semibold uppercase tracking-[0.15em] text-foreground transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
               >
-                Explore Our Services
+                START A CONVERSATION
               </Link>
 
               <Link
-                href="/contact"
+                href="/services"
                 className="inline-flex items-center border border-secondary px-8 py-3.5 text-sm font-body-semibold uppercase tracking-[0.15em] text-secondary transition-all duration-200 hover:bg-secondary hover:text-background"
               >
-                Speak With Us
+                Explore Approach
               </Link>
             </motion.div>
           </div>

@@ -42,17 +42,16 @@ export default function ExperienceSpecialization() {
           >
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-12">
               <p className="font-body-normal text-base leading-relaxed text-foreground/80 md:text-lg">
-                Our advisory team brings together decades of practical
-                experience in Pan-African markets. We don&apos;t just provide
-                theoretical frameworks; we deliver battle-tested strategies
-                derived from complex institutional turnarounds and high-growth
-                advisory.
+                Afresource&apos;s perspective is shaped by practical experience
+                across corporate and development environments. This includes
+                exposure to organizational transitions, onboarding, staff
+                mobility, employee lifecycle processes, performance management
+                systems, and people systems design
               </p>
               <p className="font-body-normal text-base leading-relaxed text-foreground/80 md:text-lg">
-                From ESG transformation to board-level governance, our
-                specialized knowledge ensures that our clients are prepared for
-                the regulatory and economic shifts of tomorrow&apos;s African
-                landscape.
+                That grounding informs an approach that balances structure,
+                clarity, and operational reality — helping organizations build
+                systems that work in practice, not just on paper.
               </p>
             </div>
           </motion.div>

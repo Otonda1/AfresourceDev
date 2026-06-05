@@ -7,25 +7,25 @@ const steps = [
     number: "01",
     title: "Diagnose",
     description:
-      "Deep-dive assessment of existing organizational systems, culture, and pain points.",
+      "We assess existing people systems, organizational structures, and governance practices to understand what is working, what is unclear, and where gaps exist.",
   },
   {
     number: "02",
     title: "Design",
     description:
-      "Architecting bespoke solutions that align governance with growth aspirations.",
+      "We develop practical, context-specific systems and frameworks aligned to the organization’s goals, operating model, and stage of growth.",
   },
   {
     number: "03",
     title: "Align",
     description:
-      "Engaging stakeholders to ensure organizational buy-in and structural synergy.",
+      "We support clarity across stakeholders so that roles, expectations, processes, and decision-making responsibilities are understood and consistently applied.",
   },
   {
     number: "04",
     title: "Support",
     description:
-      "Active partnership through implementation to ensure lasting transformation.",
+      "We help organizations translate system design into practical use, ensuring that frameworks are not only well developed, but usable in real operating environments.",
   },
 ];
 

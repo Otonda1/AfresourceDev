@@ -42,8 +42,8 @@ export default function CTA() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
         >
-          Connect with our advisory principals for a confidential diagnostic
-          session.
+          If your organization is growing, transitioning, or strengthening its
+          people systems, Afresource would be glad to start a conversation.
         </motion.p>
 
         <motion.div
@@ -57,7 +57,7 @@ export default function CTA() {
             href="/contact"
             className="inline-block bg-accent px-14 py-4 font-body-semibold text-sm uppercase tracking-[0.2em] text-foreground transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-accent/20 md:px-20 md:py-5"
           >
-            Get in Touch
+            Start A conversation
           </Link>
         </motion.div>
       </div>
