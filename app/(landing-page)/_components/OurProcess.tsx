@@ -13,7 +13,7 @@ const steps = [
     number: "02",
     title: "Design",
     description:
-      "We develop practical, context-specific systems and frameworks aligned to the organization’s goals, operating model, and stage of growth.",
+      "We develop practical, context-specific systems and frameworks aligned to the organization's goals, operating model, and stage of growth.",
   },
   {
     number: "03",

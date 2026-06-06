@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
@@ -16,123 +16,324 @@ const navLinks = [
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
+  const [atTop, setAtTop] = useState(true);
   const pathname = usePathname();
+  const lastScrollY = useRef(0);
+  const ticking = useRef(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!ticking.current) {
+        requestAnimationFrame(() => {
+          const currentScrollY = window.scrollY;
+
+          setAtTop(currentScrollY < 10);
+          setScrolled(currentScrollY > 60);
+
+          // Hide navbar when scrolling down fast, reveal when scrolling up
+          if (
+            currentScrollY > lastScrollY.current + 8 &&
+            currentScrollY > 120
+          ) {
+            setHidden(true);
+          } else if (currentScrollY < lastScrollY.current - 4) {
+            setHidden(false);
+          }
+
+          lastScrollY.current = currentScrollY;
+          ticking.current = false;
+        });
+        ticking.current = true;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Close mobile menu on route change
+  useEffect(() => {
+    const closeMobileMenu = () => setMobileMenuOpen(false);
+    closeMobileMenu();
+  }, [pathname]);
 
   return (
-    <header className="w-full bg-background">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <nav className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center shrink-0">
-            <Image
-              src="/logo/Afresource_Primary_Green.png"
-              alt="Afresource logo"
-              width={1280}
-              height={315}
-              className="h-9 w-auto"
-              priority
-            />
-          </Link>
+    <>
+      {/* Sticky container */}
+      <header
+        className={[
+          "fixed top-0 left-0 right-0 z-50",
+          "transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]",
+          hidden ? "-translate-y-full" : "translate-y-0",
+        ].join(" ")}
+        style={{ willChange: "transform" }}
+      >
+        {/* Floating pill wrapper — appears after scroll */}
+        <div
+          className={[
+            "mx-auto transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]",
+            scrolled ? "max-w-5xl mt-3 px-2" : "max-w-7xl mt-0 px-0",
+          ].join(" ")}
+        >
+          <div
+            className={[
+              "relative transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]",
+              scrolled
+                ? "rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.10),0_1.5px_4px_rgba(0,0,0,0.06)] border border-white/60 backdrop-blur-xl bg-white/85"
+                : "rounded-none shadow-none border-transparent bg-background",
+            ].join(" ")}
+          >
+            <div
+              className={[
+                "mx-auto transition-all duration-500",
+                scrolled ? "max-w-full px-5" : "max-w-7xl px-4 sm:px-6 lg:px-8",
+              ].join(" ")}
+            >
+              <nav
+                className={[
+                  "flex items-center justify-between transition-all duration-500",
+                  scrolled ? "h-15" : "h-20",
+                ].join(" ")}
+              >
+                {/* Logo */}
+                <Link href="/" className="flex items-center shrink-0 group">
+                  <div className="relative overflow-hidden">
+                    <Image
+                      src="/logo/Afresource_Primary_Green.png"
+                      alt="Afresource logo"
+                      width={1280}
+                      height={315}
+                      className={[
+                        "w-auto transition-all duration-500",
+                        scrolled ? "h-7" : "h-9",
+                      ].join(" ")}
+                      priority
+                    />
+                    {/* Subtle shimmer on hover */}
+                    <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out bg-linear-to-r from-transparent via-white/30 to-transparent pointer-events-none" />
+                  </div>
+                </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
-            {navLinks.map((link) => {
+                {/* Desktop Navigation */}
+                <div className="hidden lg:flex items-center gap-1">
+                  {navLinks.map((link) => {
+                    const isActive = pathname === link.href;
+                    return (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        className={[
+                          "relative px-3.5 py-2 rounded-lg text-[0.9rem]  font-body-medium transition-all duration-200",
+                          "hover:bg-black/4",
+                          isActive
+                            ? "text-secondary"
+                            : "text-primary hover:text-secondary",
+                        ].join(" ")}
+                      >
+                        {link.label}
+                        {/* Animated active dot */}
+                        {isActive && (
+                          <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-secondary animate-[appear_0.3s_ease_forwards]" />
+                        )}
+                      </Link>
+                    );
+                  })}
+                </div>
+
+                {/* CTA Button */}
+                <div className="hidden lg:flex items-center shrink-0">
+                  <Link
+                    href="/contact"
+                    className={[
+                      "relative inline-flex items-center gap-2 overflow-hidden",
+                      "rounded-xl px-5 py-2.5 text-sm font-semibold font-body-normal text-white",
+                      "bg-primary transition-all duration-300",
+                      "hover:shadow-[0_4px_20px_rgba(0,0,0,0.18)] hover:-translate-y-0.5 hover:scale-[1.02]",
+                      "active:translate-y-0 active:scale-100",
+                      "group",
+                    ].join(" ")}
+                  >
+                    {/* Background sweep on hover */}
+                    <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-linear-to-r from-transparent via-white/10 to-transparent" />
+                    <span className="relative">Partner with Us</span>
+                    <ArrowIcon />
+                  </Link>
+                </div>
+
+                {/* Mobile Menu Button */}
+                <button
+                  type="button"
+                  className="lg:hidden flex items-center justify-center p-2 rounded-lg text-primary hover:bg-black/5 transition-all duration-200"
+                  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                  aria-label="Toggle menu"
+                  aria-expanded={mobileMenuOpen}
+                >
+                  <span
+                    className={[
+                      "block transition-all duration-300",
+                      mobileMenuOpen
+                        ? "rotate-90 opacity-0 absolute"
+                        : "rotate-0 opacity-100",
+                    ].join(" ")}
+                  >
+                    <MenuIcon />
+                  </span>
+                  <span
+                    className={[
+                      "block transition-all duration-300",
+                      mobileMenuOpen
+                        ? "rotate-0 opacity-100"
+                        : "-rotate-90 opacity-0 absolute",
+                    ].join(" ")}
+                  >
+                    <CloseIcon />
+                  </span>
+                </button>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {/* Mobile Navigation — rendered outside the sticky header so it doesn't clip */}
+      <div
+        className={[
+          "fixed inset-x-0 z-40 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]",
+          mobileMenuOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none",
+        ].join(" ")}
+        style={{ top: scrolled ? "calc(60px + 0.75rem + 0.5rem)" : "80px" }}
+      >
+        <div className="mx-auto max-w-5xl px-4 sm:px-6">
+          <div
+            className={[
+              "rounded-2xl border border-white/60 backdrop-blur-xl bg-white/90",
+              "shadow-[0_8px_32px_rgba(0,0,0,0.12)] p-3 space-y-1",
+              "transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]",
+              mobileMenuOpen ? "translate-y-0" : "-translate-y-4",
+            ].join(" ")}
+          >
+            {navLinks.map((link, i) => {
               const isActive = pathname === link.href;
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="relative py-1 text-base font-body-medium transition-colors duration-200"
+                  className={[
+                    "flex items-center gap-3 rounded-xl px-4 py-3",
+                    "text-[0.95rem] font-body-medium transition-all duration-200",
+                    "hover:bg-black/4",
+                    isActive
+                      ? "text-secondary bg-(--secondary)/40"
+                      : "text-primary",
+                  ].join(" ")}
                   style={{
-                    color: isActive
-                      ? "var(--secondary-accent)"
-                      : "var(--primary)",
+                    transitionDelay: mobileMenuOpen ? `${i * 40}ms` : "0ms",
+                    transform: mobileMenuOpen
+                      ? "translateX(0)"
+                      : "translateX(-8px)",
+                    opacity: mobileMenuOpen ? 1 : 0,
                   }}
+                  onClick={() => setMobileMenuOpen(false)}
                 >
-                  {link.label}
                   {isActive && (
-                    <span className="absolute -bottom-0.5 left-0 h-0.5 w-full rounded-full bg-secondary" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-secondary shrink-0" />
                   )}
+                  {link.label}
                 </Link>
               );
             })}
-          </div>
 
-          {/* CTA Button */}
-          <div className="hidden lg:flex items-center shrink-0">
-            <Link
-              href="/partner"
-              className="inline-flex items-center rounded-md px-6 py-2.5 text-sm font-medium text-white font-body-normal bg-primary transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5"
-            >
-              Partner with Us
-            </Link>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            type="button"
-            className="lg:hidden flex items-center justify-center p-2 text-primary hover:text-secondary transition-colors"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {mobileMenuOpen ? <CloseIcon /> : <MenuIcon />}
-          </button>
-        </nav>
-      </div>
-
-      {/* Mobile Navigation */}
-      <div
-        className={`lg:hidden border-t overflow-hidden transition-all duration-300 ease-in-out border-secondary ${
-          mobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-        }`}
-      >
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 pb-4 pt-2 space-y-1">
-          {navLinks.map((link) => {
-            const isActive = pathname === link.href;
-            return (
+            <div className="pt-2 pb-1 px-1">
               <Link
-                key={link.href}
-                href={link.href}
-                className="block rounded-lg px-3 py-3 text-base font-medium transition-colors"
+                href="/partner"
+                className={[
+                  "flex w-full items-center justify-center gap-2 rounded-xl px-5 py-3",
+                  "text-sm font-semibold text-white bg-primary",
+                  "transition-all duration-300 hover:shadow-md hover:-translate-y-0.5",
+                  "active:translate-y-0",
+                ].join(" ")}
                 style={{
-                  fontFamily: "var(--font-body)",
-                  color: isActive
-                    ? "var(--secondary-accent)"
-                    : "var(--primary)",
-                  backgroundColor: isActive
-                    ? "var(--secondary)"
-                    : "transparent",
+                  transitionDelay: mobileMenuOpen
+                    ? `${navLinks.length * 40}ms`
+                    : "0ms",
+                  transform: mobileMenuOpen
+                    ? "translateX(0)"
+                    : "translateX(-8px)",
+                  opacity: mobileMenuOpen ? 1 : 0,
                 }}
                 onClick={() => setMobileMenuOpen(false)}
               >
-                {link.label}
+                Partner with Us
+                <ArrowIcon />
               </Link>
-            );
-          })}
-          <div className="pt-3">
-            <Link
-              href="/partner"
-              className="block w-full text-center rounded-md px-5 py-3 text-sm font-medium text-white"
-              style={{
-                fontFamily: "var(--font-body)",
-                backgroundColor: "var(--primary)",
-              }}
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Partner with Us
-            </Link>
+            </div>
           </div>
         </div>
       </div>
-    </header>
+
+      {/* Top spacer — prevents content from hiding behind the fixed navbar */}
+      <div className="h-20" aria-hidden="true" />
+    </>
+  );
+}
+
+/* ── Sub-components ──────────────────────────────────────────── */
+
+function ScrollProgressBar() {
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const onScroll = () => {
+      const el = document.documentElement;
+      const scrolled = el.scrollTop;
+      const total = el.scrollHeight - el.clientHeight;
+      setProgress(total > 0 ? (scrolled / total) * 100 : 0);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  return (
+    <div
+      className="absolute bottom-0 left-0 right-0 h-[1.5px] overflow-hidden rounded-b-2xl pointer-events-none"
+      aria-hidden="true"
+    >
+      <div
+        className="h-full bg-secondary transition-none origin-left"
+        style={{ width: `${progress}%` }}
+      />
+    </div>
+  );
+}
+
+function ArrowIcon() {
+  return (
+    <svg
+      width="14"
+      height="14"
+      viewBox="0 0 14 14"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="relative transition-transform duration-200 group-hover:translate-x-0.5"
+      aria-hidden="true"
+    >
+      <path d="M2 7h10M7 2l5 5-5 5" />
+    </svg>
   );
 }
 
 function MenuIcon() {
   return (
     <svg
-      width="24"
-      height="24"
+      width="22"
+      height="22"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -147,8 +348,8 @@ function MenuIcon() {
 function CloseIcon() {
   return (
     <svg
-      width="24"
-      height="24"
+      width="22"
+      height="22"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
