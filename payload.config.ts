@@ -3,6 +3,8 @@ import { lexicalEditor } from "@payloadcms/richtext-lexical";
 import { postgresAdapter } from "@payloadcms/db-postgres";
 import { buildConfig } from "payload";
 import { Homepage } from "./cms/globals/Homepage";
+import { Media } from "./cms/collections/Media";
+import { Aboutpage } from "./cms/globals/Aboutpage";
 
 export default buildConfig({
   admin: {
@@ -14,7 +16,7 @@ export default buildConfig({
   // If you'd like to use Rich Text, pass your editor here
   editor: lexicalEditor(),
 
-  globals: [Homepage],
+  globals: [Homepage, Aboutpage],
 
   // Define and configure your collections in this array
   collections: [
@@ -23,6 +25,7 @@ export default buildConfig({
       auth: true,
       fields: [],
     },
+    Media,
   ],
 
   // Your Payload secret - should be a complex and secure string, unguessable

@@ -44,7 +44,8 @@ export default function Hero({ data }: HeroProps) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
             >
-              {data.headline}
+              Designing the people systems that support how organizations grow,
+              operate, and perform.
             </motion.h1>
 
             {/* Description */}
@@ -55,7 +56,7 @@ export default function Hero({ data }: HeroProps) {
               transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
             >
               We help organizations strengthen people infrastructure, structure,
-              and governance to support clarity, consistency, and scale.
+              and governance to support clarity, consistency and scale.
             </motion.p>
 
             {/* Buttons */}
