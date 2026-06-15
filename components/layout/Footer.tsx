@@ -1,92 +1,116 @@
-// app/sections/Footer.tsx
 "use client";
 
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { Mail, Phone, MapPin, ExternalLink, ArrowUpRight } from "lucide-react";
-
-const serviceLinks = [
-  { label: "People Infrastructure", href: "/services/people-infrastructure" },
-  {
-    label: "Organizational Structure",
-    href: "/services/organizational-structure",
-  },
-  { label: "Governance Systems", href: "/services/governance-systems" },
-  { label: "Sustainable Growth", href: "/services/sustainable-growth" },
-];
+import { Mail, Phone, MapPin, ArrowUpRight, MoveUpRight } from "lucide-react";
 
 const companyLinks = [
-  { label: "About Us", href: "/about" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
   { label: "Who We Serve", href: "/who-we-serve" },
   { label: "Insights", href: "/insights" },
-  { label: "Careers", href: "/careers" },
+  { label: "Contact", href: "/contact" },
+];
+
+const contactItems = [
+  {
+    icon: Mail,
+    label: "hello@afresource.com",
+    href: "mailto:hello@afresource.com",
+  },
+  { icon: Phone, label: "+254 000 000 000", href: "tel:+254000000000" },
+  { icon: MapPin, label: "Nairobi, Kenya", href: null },
 ];
 
 export default function Footer() {
   return (
-    <footer className="border-t border-foreground/10 bg-background">
-      <div className="mx-auto max-w-7xl px-4 pt-16 pb-8 sm:px-6 lg:px-8 lg:pt-32">
-        {/* Main Footer Grid */}
+    <footer className="relative overflow-hidden bg-background text-white">
+      {/* ── Signature background element: large ghost letterform ── */}
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-8 -bottom-12 select-none font-heading-bold text-[22rem] leading-none text-white/[0.035] lg:text-[28rem]"
+      >
+        A
+      </span>
+
+      {/* ── Thin top accent line ── */}
+      <div className="h-0.5 w-full bg-linear-to-r from-transparent via-secondary/60 to-transparent" />
+
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* ── CTA Banner ── */}
         <motion.div
-          className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-12 lg:gap-8"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.65, ease: "easeOut" }}
+          className="flex flex-col items-start justify-between gap-6 border-b border-white/10 py-14 sm:flex-row sm:items-center"
         >
-          {/* Brand Column */}
-          <div className="lg:col-span-4">
-            <Link href="/" className="inline-block">
+          <div>
+            <p className="font-body-normal text-xs uppercase tracking-[0.22em] text-foreground">
+              Ready to grow?
+            </p>
+            <h2 className="mt-2 font-heading-bold text-3xl text-primary sm:text-4xl">
+              Let&apos;s start a conversation.
+            </h2>
+          </div>
+          <Link
+            href="/contact"
+            className="group relative inline-flex shrink-0 items-center gap-2.5 overflow-hidden rounded-xl border border-primary/20 bg-primary px-7 py-3.5 font-body-semibold text-sm text-white backdrop-blur-sm transition-all duration-300 hover:border-primary/40 hover:bg-primary/80"
+          >
+            <span className="relative z-10">Partner with Us</span>
+            <ArrowUpRight
+              className="relative z-10 h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+              strokeWidth={1.75}
+            />
+          </Link>
+        </motion.div>
+
+        {/* ── Main grid ── */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+          className="grid grid-cols-1 gap-12 py-14 sm:grid-cols-2 lg:grid-cols-12 lg:gap-8"
+        >
+          {/* Brand */}
+          <div className="lg:col-span-5">
+            <Link href="/" className="inline-block max-w-50">
+              {/* Invert the green logo to show white on dark background */}
               <Image
                 src="/logo/Afresource_Primary_Green.png"
-                alt="Afresource"
+                alt="Afresource Network Ltd"
                 width={1280}
                 height={315}
+                className="h-auto w-full "
               />
             </Link>
-            <p className="mt-5 max-w-xs font-body-normal text-sm leading-relaxed text-foreground/60">
-              Advisory for structured, effective organizations across
-              Pan-African markets.
+
+            <p className="mt-6 max-w-xs font-body-normal text-sm leading-relaxed text-foreground/75">
+              Organizational readiness advisory for organizations strengthening
+              the people, structures, and capabilities required to achieve
+              lasting goals.
             </p>
 
-            {/* Social Links */}
-            <div className="mt-6 flex items-center gap-4">
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-foreground/10 text-foreground/40 transition-all duration-200 hover:border-primary hover:text-primary"
-                aria-label="LinkedIn"
-              >
-                <ExternalLink className="h-4 w-4" strokeWidth={1.5} />
-              </a>
-            </div>
+            <p className="mt-5 font-heading-medium text-base italic text-secondary">
+              People. Structure. Sustainable Growth.
+            </p>
+
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="mt-8 inline-flex h-9 w-9 items-center justify-center rounded-lg border border-primary/15 text-primary/40 transition-all duration-200 hover:border-secondary/40 hover:text-primary"
+            >
+              <MoveUpRight className="h-4 w-4" strokeWidth={1.5} />
+            </a>
           </div>
 
-          {/* Services Column */}
-          <div className="lg:col-span-2 lg:col-start-6">
-            <h4 className="font-body-semibold text-xs uppercase tracking-[0.2em] text-foreground/40">
-              Services
-            </h4>
-            <ul className="mt-5 space-y-3">
-              {serviceLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="group inline-flex items-center gap-1 font-body-normal text-sm text-foreground/70 transition-colors duration-200 hover:text-primary"
-                  >
-                    {link.label}
-                    <ArrowUpRight className="h-3 w-3 opacity-0 transition-all duration-200 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Company Column */}
-          <div className="lg:col-span-2">
-            <h4 className="font-body-semibold text-xs uppercase tracking-[0.2em] text-foreground/40">
+          {/* Company links */}
+          <div className="lg:col-span-3">
+            <h4 className="font-body-semibold text-[10px] uppercase tracking-[0.25em] text-foreground/35">
               Company
             </h4>
             <ul className="mt-5 space-y-3">
@@ -94,85 +118,74 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="group inline-flex items-center gap-1 font-body-normal text-sm text-foreground/70 transition-colors duration-200 hover:text-primary"
+                    className="group inline-flex items-center gap-1 font-body-normal text-sm text-foreground/60 transition-colors duration-200 hover:text-secondary"
                   >
                     {link.label}
-                    <ArrowUpRight className="h-3 w-3 opacity-0 transition-all duration-200 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                    <ArrowUpRight
+                      className="h-3 w-3 opacity-0 transition-all duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:opacity-60"
+                      strokeWidth={1.75}
+                    />
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Contact Column */}
-          <div className="lg:col-span-3">
-            <h4 className="font-body-semibold text-xs uppercase tracking-[0.2em] text-foreground/40">
-              Contact
+          {/* Contact */}
+          <div className="lg:col-span-4">
+            <h4 className="font-body-semibold text-[10px] uppercase tracking-[0.25em] text-foreground/35">
+              Get in touch
             </h4>
             <ul className="mt-5 space-y-4">
-              <li className="flex items-start gap-3">
-                <Mail
-                  className="mt-0.5 h-4 w-4 shrink-0 text-foreground/40"
-                  strokeWidth={1.5}
-                />
-                <a
-                  href="mailto:hello@afresource.com"
-                  className="font-body-normal text-sm text-foreground/70 transition-colors duration-200 hover:text-primary"
-                >
-                  hello@afresource.com
-                </a>
-              </li>
-              <li className="flex items-start gap-3">
-                <Phone
-                  className="mt-0.5 h-4 w-4 shrink-0 text-foreground/40"
-                  strokeWidth={1.5}
-                />
-                <a
-                  href="tel:+2341234567890"
-                  className="font-body-normal text-sm text-foreground/70 transition-colors duration-200 hover:text-primary"
-                >
-                  +234 123 456 7890
-                </a>
-              </li>
-              <li className="flex items-start gap-3">
-                <MapPin
-                  className="mt-0.5 h-4 w-4 shrink-0 text-foreground/40"
-                  strokeWidth={1.5}
-                />
-                <span className="font-body-normal text-sm text-foreground/70">
-                  Lagos, Nigeria
-                </span>
-              </li>
+              {contactItems.map(({ icon: Icon, label, href }) => (
+                <li key={label} className="flex items-start gap-3">
+                  <Icon
+                    className="mt-0.5 h-4 w-4 shrink-0 text-primary/70"
+                    strokeWidth={1.5}
+                  />
+                  {href ? (
+                    <a
+                      href={href}
+                      className="font-body-normal text-sm text-foreground/60 transition-colors duration-200 hover:text-secondary"
+                    >
+                      {label}
+                    </a>
+                  ) : (
+                    <span className="font-body-normal text-sm text-foreground/60">
+                      {label}
+                    </span>
+                  )}
+                </li>
+              ))}
             </ul>
           </div>
         </motion.div>
 
-        {/* Bottom Bar */}
+        {/* ── Bottom bar ── */}
         <motion.div
-          className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-foreground/10 pt-8 md:flex-row"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+          transition={{ duration: 0.5, delay: 0.25, ease: "easeOut" }}
+          className="flex flex-col items-center justify-between gap-4 border-t border-white/10 py-8 md:flex-row"
         >
-          <p className="font-body-normal text-xs text-foreground/40">
+          <p className="font-body-normal text-xs text-foreground/50">
             &copy; {new Date().getFullYear()} Afresource Network Ltd. All rights
             reserved.
           </p>
-
           <div className="flex items-center gap-6">
-            <Link
-              href="/privacy"
-              className="font-body-normal text-xs text-foreground/40 transition-colors duration-200 hover:text-primary"
-            >
-              Privacy Policy
-            </Link>
-            <Link
-              href="/terms"
-              className="font-body-normal text-xs text-foreground/40 transition-colors duration-200 hover:text-primary"
-            >
-              Terms of Service
-            </Link>
+            {[
+              { label: "Privacy Policy", href: "/privacy" },
+              { label: "Terms of Use", href: "/terms" },
+            ].map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="font-body-normal text-xs text-foreground/60 transition-colors duration-200 hover:text-secondary/70"
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
         </motion.div>
       </div>
