@@ -46,9 +46,8 @@ export default function WhoWeServeHero() {
               transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
             >
               Afresource works with organizations navigating growth, transition,
-              or operational complexity — helping strengthen the people systems,
-              structures, and governance needed for clarity, consistency, and
-              performance.
+              and increasing complexity by strengthening the foundations
+              required for organizational readiness and sustainable performance.
             </motion.p>
           </div>
         </div>

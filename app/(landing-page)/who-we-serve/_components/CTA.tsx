@@ -14,7 +14,7 @@ export default function WhoWeServeCTA() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
-          Ready to strengthen the systems behind performance?
+          Let&apos;s Discuss Your Organization
         </motion.h2>
 
         <motion.p
@@ -24,9 +24,9 @@ export default function WhoWeServeCTA() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.15, ease: "easeOut" }}
         >
-          If your organization is growing, transitioning, or seeking greater
-          clarity in its people systems, Afresource can help structure the next
-          stage.
+          If your organization is preparing for growth, navigating change, or
+          strengthening long-term performance, Afresource can help build the
+          foundations required for sustainable success.
         </motion.p>
 
         <motion.div

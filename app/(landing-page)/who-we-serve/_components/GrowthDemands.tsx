@@ -5,19 +5,19 @@ import { motion } from "framer-motion";
 
 const phases = [
   {
-    title: "Informal Ways of Working",
+    title: "People & Capability",
     description:
       "Reliance on founder knowledge, ad-hoc processes, and reactive problem-solving.",
     active: false,
   },
   {
-    title: "Structured People Systems",
+    title: "Sysyems & Structure",
     description:
       "Defining roles, formalizing governance, and aligning talent with strategic objectives.",
     active: false,
   },
   {
-    title: "Sustainable Performance",
+    title: "Perfomance & Sustainability",
     description:
       "Institutional resilience, scalable operations, and predictable, high-quality outcomes.",
     active: true,

@@ -3,6 +3,7 @@ import WhoWeServeCTA from "./_components/CTA";
 import GrowthDemands from "./_components/GrowthDemands";
 
 import WhoWeServeHero from "./_components/Hero";
+import IntroStatement from "./_components/IntroStatement";
 
 const Clients = () => {
   return (
@@ -10,6 +11,7 @@ const Clients = () => {
       <WhoWeServeHero />
       <GrowthDemands />
       <ContextCards />
+      <IntroStatement />
       <WhoWeServeCTA />
     </>
   );
