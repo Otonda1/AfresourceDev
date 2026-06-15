@@ -15,7 +15,7 @@ export default function ServicesCTA() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
-          Strengthen the systems behind performance.
+          Discuss Your Organizational Needs
         </motion.h2>
 
         <motion.p
@@ -25,9 +25,10 @@ export default function ServicesCTA() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.15, ease: "easeOut" }}
         >
-          If your organization is refining its people systems, clarifying
-          structure, or preparing for growth, Afresource can help define a
-          practical path forward.
+          Whether your organization is preparing for growth, navigating change,
+          strengthening performance, or building long-term capability,
+          Afresource can help assess and strengthen the foundations required for
+          success.
         </motion.p>
 
         <motion.div

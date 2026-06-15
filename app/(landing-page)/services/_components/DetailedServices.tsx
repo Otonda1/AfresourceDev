@@ -1,4 +1,3 @@
-// app/services/sections/DetailedServices.tsx
 "use client";
 
 import { motion } from "framer-motion";
