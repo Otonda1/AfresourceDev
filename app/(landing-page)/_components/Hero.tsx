@@ -1,4 +1,3 @@
-// app/sections/Hero.tsx
 "use client";
 
 import { motion } from "framer-motion";
@@ -34,18 +33,18 @@ export default function Hero({ data }: HeroProps) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
             >
-              Established Excellence
+              Advisory Excellence
             </motion.span>
 
             {/* Heading */}
             <motion.h1
-              className="font-heading-bold text-4xl italic leading-[1.1] text-primary md:text-5xl lg:text-[3.5rem] xl:text-[4rem]"
+              className="font-heading-bold text-4xl italic leading-[1.1] text-primary md:text-4xl lg:text-[3rem] xl:text-[3.5rem]"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
             >
-              Designing the people systems that support how organizations grow,
-              operate, and perform.
+              Designing the people systems that support organizational
+              readiness, performance, and sustainable growth.
             </motion.h1>
 
             {/* Description */}
@@ -55,8 +54,10 @@ export default function Hero({ data }: HeroProps) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
             >
-              We help organizations strengthen people infrastructure, structure,
-              and governance to support clarity, consistency and scale.
+              Afresource specializes in Organizational Readiness. We help
+              organizations assess, strengthen, and sustain the people
+              structures, systems, and capabilities required to achieve their
+              goals.
             </motion.p>
 
             {/* Buttons */}

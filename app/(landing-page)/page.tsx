@@ -2,7 +2,7 @@ import Capabilities from "./_components/Capabilities";
 import CTA from "./_components/CTA";
 import ExperienceSpecialization from "./_components/ExperienceSpecialization";
 import Hero from "./_components/Hero";
-import InstitutionalEcosystem from "./_components/InstitutionalEcosystem";
+import WhoBenefits from "./_components/WhoBenefits";
 import OurPerspective from "./_components/OurPerspective";
 import OurProcess from "./_components/OurProcess";
 import ValueProposition from "./_components/ValueProposition";
@@ -27,7 +27,7 @@ export default async function Home() {
         <Capabilities />
         <ValueProposition />
         <OurProcess />
-        <InstitutionalEcosystem />
+        <WhoBenefits />
         <ExperienceSpecialization />
         <CTA />
       </main>

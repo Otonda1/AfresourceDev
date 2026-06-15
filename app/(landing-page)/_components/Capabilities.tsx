@@ -2,93 +2,110 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { ClipboardCheck, RefreshCw, BarChart3 } from "lucide-react";
 
-const capabilities = [
+const solutions = [
   {
-    title: "People Infrastructure",
+    icon: ClipboardCheck,
+    title: "Organizational Readiness Assessment",
     description:
-      "Designing talent management systems that align individual performance with corporate objectives.",
-    href: "/services/people-infrastructure",
+      "Understand where your organization stands today and identify the people, structure, and capability priorities required to support future growth and performance.",
   },
   {
-    title: "Organizational Structure",
+    icon: RefreshCw,
+    title: "Workforce Transition & Integration Solutions",
     description:
-      "Developing lean, responsive hierarchies that facilitate rapid decision-making across borders.",
-    href: "/services/organizational-structure",
+      "Support employees through onboarding, mobility, organizational change, and transition initiatives that strengthen alignment and continuity.",
   },
   {
-    title: "Governance Systems",
+    icon: BarChart3,
+    title: "Organizational Performance & Capability Solutions",
     description:
-      "Implementing ethical frameworks and compliance structures for institutional resilience.",
-    href: "/services/governance-systems",
-  },
-  {
-    title: "Sustainable Growth",
-    description:
-      "Advisory on long-term value creation and ESG transformation for African enterprises.",
-    href: "/services/sustainable-growth",
+      "Design practical systems that strengthen accountability, leadership capability, employee experience, and long-term organizational effectiveness.",
   },
 ];
 
-export default function Capabilities() {
+export default function HowWeHelpOrganizations() {
   return (
     <section className="bg-primary py-24 md:py-32 lg:py-40">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          className="mb-16 flex flex-col gap-6 md:mb-20 md:flex-row md:items-end md:justify-between lg:mb-20"
+          className="mx-auto mb-16 max-w-4xl text-center md:mb-20"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
         >
-          <div>
-            <h2 className="font-heading-bold text-3xl italic text-background md:text-4xl lg:text-[2.5rem]">
-              Capabilities
-            </h2>
-            <p className="mt-3 font-body-normal text-base text-background/70">
-              Core Advisory Areas
-            </p>
-          </div>
+          <span className="font-body-semibold text-xs uppercase tracking-[0.25em] text-accent">
+            Organizational Readiness
+          </span>
 
-          <Link
-            href="/services"
-            className="group inline-flex shrink-0 items-center gap-2 font-body-semibold text-sm uppercase tracking-[0.15em] text-accent transition-colors duration-200 hover:text-secondary"
-          >
-            View Services
-            <span className="transition-transform duration-200 group-hover:translate-x-1">
-              ↗
-            </span>
-          </Link>
+          <h2 className="mt-4 font-heading-bold text-4xl italic text-background md:text-5xl lg:text-6xl">
+            How We Help Organizations
+          </h2>
+
+          <p className="mx-auto mt-6 max-w-3xl font-body-normal text-base leading-relaxed text-background/70 md:text-lg">
+            Afresource helps organizations strengthen Organizational Readiness
+            through practical advisory support designed to improve performance,
+            support change, and build long-term capability.
+          </p>
         </motion.div>
 
-        {/* Cards Grid */}
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {capabilities.map((capability, index) => (
+        {/* Cards */}
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+          {solutions.map((solution, index) => (
             <motion.div
-              key={capability.title}
+              key={solution.title}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: true }}
               transition={{
                 duration: 0.6,
-                delay: index * 0.1,
-                ease: "easeOut",
+                delay: index * 0.15,
               }}
             >
-              <div className="group flex h-full min-h-80 flex-col justify-between border border-white/10 bg-white/2 p-8 transition-all duration-300 hover:border-accent/30 hover:bg-white/4 md:p-10">
-                <div>
-                  <h3 className="font-heading-medium text-xl italic text-background md:text-2xl">
-                    {capability.title}
+              <div className="group flex h-full min-h-[360px] flex-col border border-white/10 bg-white/[0.02] p-10 transition-all duration-300 hover:border-accent/30 hover:bg-white/[0.04]">
+                <solution.icon
+                  className="h-8 w-8 text-accent"
+                  strokeWidth={1.5}
+                />
+
+                <div className="mt-12">
+                  <h3 className="font-heading-medium text-2xl italic text-background">
+                    {solution.title}
                   </h3>
-                  <p className="mt-4 font-body-normal text-sm leading-relaxed text-background/60 md:text-base">
-                    {capability.description}
+
+                  <p className="mt-5 font-body-normal text-base leading-relaxed text-background/65">
+                    {solution.description}
                   </p>
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
+
+        {/* Bottom CTA */}
+        <motion.div
+          className="mx-auto mt-16 max-w-3xl text-center md:mt-20"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <p className="font-body-normal text-sm leading-relaxed text-background/60 md:text-base">
+            Learn how Afresource helps organizations strengthen readiness,
+            navigate change, and build the foundations required for sustainable
+            performance.
+          </p>
+
+          <Link
+            href="/services"
+            className="mt-8 inline-flex items-center gap-2 border border-accent px-6 py-3 font-body-semibold text-sm uppercase tracking-[0.15em] text-accent transition-all duration-300 hover:bg-accent hover:text-primary"
+          >
+            Explore Our Services
+          </Link>
+        </motion.div>
       </div>
     </section>
   );

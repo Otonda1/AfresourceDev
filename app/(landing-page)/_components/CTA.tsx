@@ -9,7 +9,6 @@ export default function CTA() {
       {/* Subtle radial glow center */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.04)_0%,transparent_70%)]" />
 
-      {/* Watermark logo mark — replace with your actual SVG asset */}
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
         <svg
           width="380"
@@ -31,8 +30,8 @@ export default function CTA() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
-          <span className="text-background">Secure Your </span>
-          <span className="text-accent">Structural Consultation</span>
+          <span className="text-background">Ready to Strengthen </span>
+          <span className="text-accent">Organizational Readiness</span>
         </motion.h2>
 
         <motion.p
@@ -42,8 +41,8 @@ export default function CTA() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
         >
-          If your organization is growing, transitioning, or strengthening its
-          people systems, Afresource would be glad to start a conversation.
+          If your organization is preparing for growth, navigating change, or
+          strengthening its foundations, let&apos;s start the conversation.
         </motion.p>
 
         <motion.div

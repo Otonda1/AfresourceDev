@@ -1,27 +1,27 @@
 "use client";
 
+import { Compass, BriefcaseBusiness, Globe2 } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { AlertCircle, Users, Globe } from "lucide-react";
 
 const valuePoints = [
   {
-    icon: AlertCircle,
-    title: "Eliminating Decision Bottlenecks",
+    icon: Compass,
+    title: "Organizational Readiness Expertise",
     description:
-      "We resolve structural friction that slows down strategic execution and market entry.",
+      "We help organizations assess, strengthen, and sustain the people structures, systems, and capabilities required to achieve their goals.",
   },
   {
-    icon: Users,
-    title: "High-Trust Ecosystems",
+    icon: BriefcaseBusiness,
+    title: "Practical Organizational Experience",
     description:
-      "Building internal cultures defined by accountability and intellectual rigor.",
+      "Our perspective is shaped by experience across corporate and development environments, including transitions, onboarding, mobility, performance processes, and people systems design.",
   },
   {
-    icon: Globe,
-    title: "Pan-African Contextual Intelligence",
+    icon: Globe2,
+    title: "Pan-African Perspective",
     description:
-      "Leveraging local nuance with global advisory standards for unmatched excellence.",
+      "We support organizations operating in dynamic African contexts, balancing structured advisory thinking with practical realities across growth, change, and implementation.",
   },
 ];
 
@@ -29,57 +29,58 @@ export default function ValueProposition() {
   return (
     <section className="bg-background py-24 md:py-32 lg:py-40">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 items-start gap-16 lg:grid-cols-2 lg:gap-20">
-          {/* Left Column — Content */}
-          <div className="space-y-10">
+        <div className="grid grid-cols-1 items-center gap-20 lg:grid-cols-2">
+          {/* Content */}
+          <div>
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.7, ease: "easeOut" }}
-              className="space-y-6"
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
             >
               <span className="font-body-semibold text-xs uppercase tracking-[0.2em] text-accent">
-                The Value Proposition
+                Why Organizations Partner With Us
               </span>
 
-              <h2 className="font-heading-bold text-3xl italic text-primary md:text-4xl lg:text-[2.75rem] lg:leading-[1.15]">
-                Why Organizations Partner With Us
+              <h2 className="mt-4 font-heading-bold text-4xl italic text-primary md:text-5xl">
+                Readiness is built through people, systems, and structure
+                working in alignment.
               </h2>
 
-              <p className="max-w-lg font-body-normal text-base leading-relaxed text-foreground/80 md:text-lg">
-                Rapidly scaling organizations often outgrow their internal
-                systems. We provide the diagnostic clarity and implementation
-                support to bridge these critical performance gaps.
+              <p className="mt-6 max-w-xl font-body-normal text-base leading-relaxed text-foreground/75 md:text-lg">
+                Afresource helps organizations assess, strengthen, and sustain
+                the foundations required to achieve their goals — supporting
+                readiness, performance, and long-term organizational
+                effectiveness.
               </p>
             </motion.div>
 
-            {/* Feature List */}
-            <div className="space-y-8">
+            <div className="mt-8 space-y-8">
               {valuePoints.map((point, index) => (
                 <motion.div
                   key={point.title}
-                  initial={{ opacity: 0, x: -20 }}
+                  initial={{ opacity: 0, x: -24 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: "-50px" }}
+                  viewport={{ once: true }}
                   transition={{
                     duration: 0.5,
-                    delay: index * 0.12,
-                    ease: "easeOut",
+                    delay: index * 0.15,
                   }}
                   className="flex gap-5"
                 >
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primaryAccent">
                     <point.icon
                       className="h-5 w-5 text-primary"
-                      strokeWidth={2}
+                      strokeWidth={1.75}
                     />
                   </div>
+
                   <div>
-                    <h3 className="font-body-semibold text-base text-foreground md:text-lg">
+                    <h3 className="font-body-semibold text-lg text-primary">
                       {point.title}
                     </h3>
-                    <p className="mt-1 font-body-normal text-sm leading-relaxed text-foreground/70 md:text-base">
+
+                    <p className="mt-2 font-body-normal text-sm leading-relaxed text-foreground/70 md:text-base">
                       {point.description}
                     </p>
                   </div>
@@ -88,40 +89,40 @@ export default function ValueProposition() {
             </div>
           </div>
 
-          {/* Right Column — Image + Overlapping Card */}
+          {/* Image */}
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 32 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="relative lg:mt-12"
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="relative"
           >
-            <div className="relative overflow-hidden">
+            <div className="overflow-hidden">
               <Image
                 src="/home/office.png"
-                alt="Executive team collaborating in a modern boardroom"
+                alt="Organizational advisory discussion in a professional office setting"
                 width={1408}
                 height={768}
-                className="md:h-90 w-full object-cover"
+                className="h-full w-full object-cover"
               />
             </div>
 
-            {/* Floating Insight Card */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-              className="relative mt-6 bg-primary p-8 md:p-10 lg:absolute lg:-bottom-12 lg:-right-8 lg:mt-0 lg:max-w-xs lg:p-8"
-            >
-              <h3 className="font-heading-medium text-xl italic text-accent md:text-2xl">
-                Epistemic Rigor
-              </h3>
-              <p className="mt-4 font-body-normal text-sm leading-relaxed text-background/80 md:text-base">
-                Decisions driven by data-integrity and deep system analysis, not
-                market trends.
+            {/* Insight Panel */}
+            <div className="bg-primary p-8 md:p-10 lg:absolute lg:-bottom-10 lg:left-10 lg:max-w-sm">
+              <span className="font-body-semibold text-xs uppercase tracking-[0.2em] text-accent">
+                Readiness is built intentionally.
+              </span>
+
+              <p className="mt-4 font-heading-medium text-xl italic leading-relaxed text-background md:text-2xl">
+                Strong organizations are ready organizations.
               </p>
-            </motion.div>
+
+              <p className="mt-4 font-body-normal text-sm leading-relaxed text-background/70 md:text-base">
+                Sustainable performance depends on the readiness of the people,
+                systems, structures, and capabilities that support
+                organizational goals.
+              </p>
+            </div>
           </motion.div>
         </div>
       </div>
