@@ -35,7 +35,7 @@ export default function Footer() {
       </span>
 
       {/* ── Thin top accent line ── */}
-      <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-secondary/60 to-transparent" />
+      <div className="h-0.5 w-full bg-linear-to-r from-transparent via-secondary/60 to-transparent" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* ── CTA Banner ── */}
@@ -51,12 +51,12 @@ export default function Footer() {
               Ready to grow?
             </p>
             <h2 className="mt-2 font-heading-bold text-3xl text-white sm:text-4xl">
-              Let's start a conversation.
+              Let&apos;s start a conversation.
             </h2>
           </div>
           <Link
             href="/contact"
-            className="group relative inline-flex shrink-0 items-center gap-2.5 overflow-hidden rounded-xl border border-white/20 bg-white/10 px-7 py-3.5 font-body-semibold text-sm text-white backdrop-blur-sm transition-all duration-300 hover:border-white/40 hover:bg-white/[0.17]"
+            className="group relative inline-flex shrink-0 items-center gap-2.5 overflow-hidden rounded-xl border border-white/20 bg-white/10 px-7 py-3.5 font-body-semibold text-sm text-white backdrop-blur-sm transition-all duration-300 hover:border-white/40 hover:bg-white/17"
           >
             <span className="relative z-10">Partner with Us</span>
             <ArrowUpRight
@@ -76,7 +76,7 @@ export default function Footer() {
         >
           {/* Brand */}
           <div className="lg:col-span-5">
-            <Link href="/" className="inline-block max-w-[200px]">
+            <Link href="/" className="inline-block max-w-50">
               {/* Invert the green logo to show white on dark background */}
               <Image
                 src="/logo/Afresource_Primary_Green.png"
