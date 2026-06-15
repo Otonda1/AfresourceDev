@@ -13,7 +13,7 @@ import {
 const areas = [
   {
     icon: Brain,
-    title: "People Systems",
+    title: "People & Capability",
     description:
       "The architecture of talent, capability development, and human capital deployment.",
   },
@@ -37,7 +37,7 @@ const areas = [
   },
   {
     icon: Target,
-    title: "Performance & Capability",
+    title: "Performance & Sustainability",
     description:
       "Building the internal resilience and skill sets required to execute strategy effectively over the long term.",
     wide: true,

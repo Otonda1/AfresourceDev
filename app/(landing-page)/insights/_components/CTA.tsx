@@ -16,7 +16,7 @@ export default function InsightsCTA() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
-          Looking at your organization through a systems lens?
+          Start a Conversation
         </motion.h2>
 
         <motion.p
@@ -26,9 +26,9 @@ export default function InsightsCTA() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.15, ease: "easeOut" }}
         >
-          If your organization is navigating growth, transition, or
-          people-system challenges, Afresource can help you think through the
-          structures behind performance.
+          If your organization is preparing for growth, navigating change, or
+          strengthening long-term performance, Afresource can help build the
+          foundations required for sustainable success.
         </motion.p>
 
         <motion.div

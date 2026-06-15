@@ -39,7 +39,8 @@ export default function EditorialApproach() {
             Editorial Approach
           </h2>
           <p className="mx-auto mt-4 max-w-xl font-body-normal text-base text-foreground/70 md:text-lg">
-            Grounded in how organizations actually operate.
+            Grounded in the realities of organizational growth, readiness, and
+            performance.
           </p>
         </motion.div>
 
