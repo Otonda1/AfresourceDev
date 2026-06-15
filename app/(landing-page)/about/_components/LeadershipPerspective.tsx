@@ -31,15 +31,16 @@ export default function LeadershipPerspective() {
                 Annette Otonda
               </h3>
               <p className="mt-1 font-body-normal text-base italic text-foreground/60">
-                Managing Partner & Chief Architect
+                Managing Partner
               </p>
             </div>
 
             <p className="mt-8 max-w-md font-body-normal text-base leading-relaxed text-foreground/80 md:text-lg">
-              &ldquo;With over two decades of strategic advisory across
-              sub-Saharan Africa, I founded Afresource to move beyond
-              theoretical frameworks. We focus on the granular mechanics of how
-              organizations actually function.&rdquo;
+              &ldquo;The perspective behind Afresource has been shaped by
+              practical experience across corporate and development
+              environments, including organizational transitions, onboarding,
+              staff mobility, employee lifecycle processes, performance
+              management systems, and people systems design.&rdquo;
             </p>
 
             <Link
@@ -62,7 +63,7 @@ export default function LeadershipPerspective() {
             <div className="relative aspect-4/5 overflow-hidden bg-foreground/5">
               <Image
                 src="/images/leadership-portrait.jpg"
-                alt="Annette Otonda, Managing Partner & Chief Architect"
+                alt="Annette Otonda, Managing Partner"
                 fill
                 className="object-cover mix-blend-luminosity"
               />

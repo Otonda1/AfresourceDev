@@ -39,7 +39,8 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
             >
-              People succeed when systems support them.
+              Organizations perform best when people, systems, and structures
+              work together in alignment.
             </motion.h1>
 
             <motion.p
@@ -48,9 +49,11 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
             >
-              Afresource helps organizations design the structures, processes,
-              and people systems that create clarity, consistency, and
-              sustainable performance.
+              Organizational Readiness is the ability of an organization to
+              align its people, systems, and structures to consistently achieve
+              its goals. Afresource helps organizations strengthen this
+              readiness through practical advisory, assessment, and
+              implementation support.
             </motion.p>
 
             <motion.div

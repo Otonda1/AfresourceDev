@@ -1,35 +1,35 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Brain, Landmark, GitBranch } from "lucide-react";
+import { UsersRound, Network, TrendingUp } from "lucide-react";
 
 const pillars = [
   {
     number: "01",
-    icon: Brain,
-    title: "People",
+    icon: UsersRound,
+    title: "People & Capability",
     description:
-      "Talent is the engine of execution. We focus on optimizing human capital through behavioral alignment, capability building, and strategic leadership development.",
+      "The leadership, workforce capability, and talent systems required to achieve organizational goals.",
   },
   {
     number: "02",
-    icon: Landmark,
-    title: "Structure",
+    icon: Network,
+    title: "Systems & Structure",
     description:
-      "Clarity as the ultimate guide. We design hierarchies, workflows, and communication channels that eliminate friction and enable rapid, informed decision-making.",
+      "The governance, processes, structures, and operating mechanisms that enable effective execution.",
   },
   {
     number: "03",
-    icon: GitBranch,
-    title: "Sustainable Growth",
+    icon: TrendingUp,
+    title: "Performance & Sustainability",
     description:
-      "Institutional resilience is the objective. We build governance and operational frameworks that ensure your organization thrives long after the initial intervention.",
+      "The performance, accountability, adaptability, and continuous improvement practices that support long-term organizational effectiveness.",
   },
 ];
 
 export default function Pillars() {
   return (
-    <section className="bg-background py-24 md:py-32 lg:py-40">
+    <section className="bg-primary py-24 md:py-32 lg:py-40">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -42,10 +42,10 @@ export default function Pillars() {
           <span className="font-body-semibold text-xs uppercase tracking-[0.2em] text-accent">
             Our Framework
           </span>
-          <h2 className="mt-4 font-heading-bold text-3xl italic text-primary md:text-4xl lg:text-[2.75rem]">
-            The Pillars of Alignment
+          <h2 className="mt-4 font-heading-bold text-3xl italic text-background md:text-4xl lg:text-[2.75rem]">
+            Afresource Organizational Readiness Framework
           </h2>
-          <p className="mt-6 font-body-normal text-base text-foreground/70 md:text-lg">
+          <p className="mt-6 font-body-normal text-base text-background/70 md:text-lg">
             Our advisory approach evaluates and strengthens organizations across
             three interdependent dimensions.
           </p>
@@ -65,7 +65,7 @@ export default function Pillars() {
                 ease: "easeOut",
               }}
             >
-              <div className="group flex h-full flex-col border border-foreground/10 bg-background p-8 transition-all duration-300 hover:border-primary/30 md:p-10">
+              <div className="group flex h-full flex-col border border-white/10 bg-white/2 p-10 transition-all duration-300 hover:border-accent/30 hover:bg-white/4 md:p-10">
                 <div className="mb-8 flex items-center justify-between border-b border-foreground/10 pb-6">
                   <span className="font-heading-medium text-xl text-primary transition-colors duration-300 group-hover:text-accent">
                     {pillar.number}
@@ -76,10 +76,10 @@ export default function Pillars() {
                   />
                 </div>
 
-                <h3 className="font-heading-medium text-xl text-primary md:text-2xl">
+                <h3 className="font-heading-medium text-xl text-background md:text-2xl">
                   {pillar.title}
                 </h3>
-                <p className="mt-4 font-body-normal text-sm leading-relaxed text-foreground/70 md:text-base">
+                <p className="mt-4 font-body-normal text-sm leading-relaxed text-background/65 md:text-base">
                   {pillar.description}
                 </p>
               </div>

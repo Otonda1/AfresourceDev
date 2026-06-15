@@ -1,5 +1,4 @@
 import CTA from "./_components/CTA";
-import Capabilities from "./_components/Capabilities";
 import Hero from "./_components/Hero";
 import InsightBehind from "./_components/InsightBehind";
 import LeadershipPerspective from "./_components/LeadershipPerspective";
@@ -14,7 +13,6 @@ const About = () => {
       <InsightBehind />
       <LeadershipPerspective />
       <Pillars />
-      <Capabilities />
       <Outcomes />
       <Quote />
       <CTA />

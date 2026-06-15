@@ -16,7 +16,7 @@ export default function AboutCTA() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
-          Ready to strengthen the systems behind performance?
+          Let&apos;s Discuss Your Organization
         </motion.h2>
 
         <motion.div
@@ -30,7 +30,7 @@ export default function AboutCTA() {
             href="/contact"
             className="inline-block bg-accent px-10 py-4 font-body-semibold text-sm uppercase tracking-[0.15em] text-foreground transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
           >
-            Request Consultation
+            Start a Conversation
           </Link>
 
           <Link

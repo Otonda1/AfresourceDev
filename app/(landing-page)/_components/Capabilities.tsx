@@ -37,7 +37,7 @@ export default function HowWeHelpOrganizations() {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <span className="font-body-semibold text-xs uppercase tracking-[0.25em] text-accent">
+          <span className="font-body-semibold text-xs uppercase tracking-[0.2em] text-accent">
             Organizational Readiness
           </span>
 
@@ -65,7 +65,7 @@ export default function HowWeHelpOrganizations() {
                 delay: index * 0.15,
               }}
             >
-              <div className="group flex h-full min-h-[360px] flex-col border border-white/10 bg-white/[0.02] p-10 transition-all duration-300 hover:border-accent/30 hover:bg-white/[0.04]">
+              <div className="group flex h-full min-h-90 flex-col border border-white/10 bg-white/[0.02] p-10 transition-all duration-300 hover:border-accent/30 hover:bg-white/4">
                 <solution.icon
                   className="h-8 w-8 text-accent"
                   strokeWidth={1.5}

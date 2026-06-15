@@ -46,7 +46,7 @@ export default function OurProcess() {
           </span>
 
           <h2 className="mt-4 font-heading-bold text-2xl italic text-background md:text-3xl lg:text-4xl">
-            Framework for Implementation
+            How We Work{" "}
           </h2>
 
           <motion.div
