@@ -14,7 +14,7 @@ export default function InsightBehind() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.7, ease: "easeOut" }}
           >
-            <h2 className="font-heading-bold text-3xl italic text-primary md:text-4xl lg:text-[2.75rem] lg:leading-[1.1]">
+            <h2 className="font-heading-bold text-3xl italic text-secondary md:text-4xl lg:text-[2.75rem] lg:leading-[1.1]">
               Performance challenges rarely begin with people alone.
             </h2>
             <motion.div

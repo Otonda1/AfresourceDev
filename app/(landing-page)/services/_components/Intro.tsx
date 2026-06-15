@@ -11,13 +11,13 @@ export default function Intro() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
           <motion.div
-            className="lg:col-span-4"
+            className="lg:col-span-6"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.7, ease: "easeOut" }}
           >
-            <span className="font-body-semibold text-xs uppercase tracking-[0.2em] text-accent">
+            <span className="font-heading-bold text-3xl italic text-secondary md:text-4xl lg:text-[2.5rem]">
               Our Services
             </span>
             <motion.div
@@ -31,7 +31,7 @@ export default function Intro() {
           </motion.div>
 
           <motion.div
-            className="lg:col-span-7 lg:col-start-6"
+            className="lg:col-span-6 lg:col-start-7"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}

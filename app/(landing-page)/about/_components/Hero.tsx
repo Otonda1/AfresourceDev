@@ -11,7 +11,7 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/about/about-hero-2.png"
+          src="/about/about-hero-m.png"
           alt="Abstract architectural detail showing intersecting lines and planes, representing structured systems and clarity"
           fill
           className="object-cover"
@@ -64,7 +64,7 @@ export default function Hero() {
                 className="group inline-flex items-center gap-3 text-background transition-colors duration-200 hover:text-accent"
               >
                 <span className="font-body-semibold text-sm uppercase tracking-[0.15em]">
-                  Explore Our Approach
+                  Explore Our Services
                 </span>
                 <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-2" />
               </Link>
