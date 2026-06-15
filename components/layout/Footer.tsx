@@ -25,7 +25,7 @@ const contactItems = [
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-background text-white">
+    <footer className="relative overflow-hidden bg-primary text-white">
       {/* ── Signature background element: large ghost letterform ── */}
       <span
         aria-hidden="true"
@@ -35,7 +35,7 @@ export default function Footer() {
       </span>
 
       {/* ── Thin top accent line ── */}
-      <div className="h-0.5 w-full bg-linear-to-r from-transparent via-secondary/60 to-transparent" />
+      <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-secondary/60 to-transparent" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* ── CTA Banner ── */}
@@ -47,16 +47,16 @@ export default function Footer() {
           className="flex flex-col items-start justify-between gap-6 border-b border-white/10 py-14 sm:flex-row sm:items-center"
         >
           <div>
-            <p className="font-body-normal text-xs uppercase tracking-[0.22em] text-foreground">
+            <p className="font-body-normal text-xs uppercase tracking-[0.22em] text-white/40">
               Ready to grow?
             </p>
-            <h2 className="mt-2 font-heading-bold text-3xl text-primary sm:text-4xl">
-              Let&apos;s start a conversation.
+            <h2 className="mt-2 font-heading-bold text-3xl text-white sm:text-4xl">
+              Let's start a conversation.
             </h2>
           </div>
           <Link
             href="/contact"
-            className="group relative inline-flex shrink-0 items-center gap-2.5 overflow-hidden rounded-xl border border-primary/20 bg-primary px-7 py-3.5 font-body-semibold text-sm text-white backdrop-blur-sm transition-all duration-300 hover:border-primary/40 hover:bg-primary/80"
+            className="group relative inline-flex shrink-0 items-center gap-2.5 overflow-hidden rounded-xl border border-white/20 bg-white/10 px-7 py-3.5 font-body-semibold text-sm text-white backdrop-blur-sm transition-all duration-300 hover:border-white/40 hover:bg-white/[0.17]"
           >
             <span className="relative z-10">Partner with Us</span>
             <ArrowUpRight
@@ -76,24 +76,24 @@ export default function Footer() {
         >
           {/* Brand */}
           <div className="lg:col-span-5">
-            <Link href="/" className="inline-block max-w-50">
+            <Link href="/" className="inline-block max-w-[200px]">
               {/* Invert the green logo to show white on dark background */}
               <Image
                 src="/logo/Afresource_Primary_Green.png"
                 alt="Afresource Network Ltd"
                 width={1280}
                 height={315}
-                className="h-auto w-full "
+                className="h-auto w-full brightness-0 invert"
               />
             </Link>
 
-            <p className="mt-6 max-w-xs font-body-normal text-sm leading-relaxed text-foreground/75">
+            <p className="mt-6 max-w-xs font-body-normal text-sm leading-relaxed text-white/55">
               Organizational readiness advisory for organizations strengthening
               the people, structures, and capabilities required to achieve
               lasting goals.
             </p>
 
-            <p className="mt-5 font-heading-medium text-base italic text-secondary">
+            <p className="mt-5 font-heading-medium text-base italic text-secondary/80">
               People. Structure. Sustainable Growth.
             </p>
 
@@ -102,7 +102,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="mt-8 inline-flex h-9 w-9 items-center justify-center rounded-lg border border-primary/15 text-primary/40 transition-all duration-200 hover:border-secondary/40 hover:text-primary"
+              className="mt-8 inline-flex h-9 w-9 items-center justify-center rounded-lg border border-white/15 text-white/40 transition-all duration-200 hover:border-white/40 hover:text-white"
             >
               <MoveUpRight className="h-4 w-4" strokeWidth={1.5} />
             </a>
@@ -110,7 +110,7 @@ export default function Footer() {
 
           {/* Company links */}
           <div className="lg:col-span-3">
-            <h4 className="font-body-semibold text-[10px] uppercase tracking-[0.25em] text-foreground/35">
+            <h4 className="font-body-semibold text-[10px] uppercase tracking-[0.25em] text-white/35">
               Company
             </h4>
             <ul className="mt-5 space-y-3">
@@ -118,7 +118,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="group inline-flex items-center gap-1 font-body-normal text-sm text-foreground/60 transition-colors duration-200 hover:text-secondary"
+                    className="group inline-flex items-center gap-1 font-body-normal text-sm text-white/60 transition-colors duration-200 hover:text-white"
                   >
                     {link.label}
                     <ArrowUpRight
@@ -133,25 +133,25 @@ export default function Footer() {
 
           {/* Contact */}
           <div className="lg:col-span-4">
-            <h4 className="font-body-semibold text-[10px] uppercase tracking-[0.25em] text-foreground/35">
+            <h4 className="font-body-semibold text-[10px] uppercase tracking-[0.25em] text-white/35">
               Get in touch
             </h4>
             <ul className="mt-5 space-y-4">
               {contactItems.map(({ icon: Icon, label, href }) => (
                 <li key={label} className="flex items-start gap-3">
                   <Icon
-                    className="mt-0.5 h-4 w-4 shrink-0 text-primary/70"
+                    className="mt-0.5 h-4 w-4 shrink-0 text-white/30"
                     strokeWidth={1.5}
                   />
                   {href ? (
                     <a
                       href={href}
-                      className="font-body-normal text-sm text-foreground/60 transition-colors duration-200 hover:text-secondary"
+                      className="font-body-normal text-sm text-white/60 transition-colors duration-200 hover:text-white"
                     >
                       {label}
                     </a>
                   ) : (
-                    <span className="font-body-normal text-sm text-foreground/60">
+                    <span className="font-body-normal text-sm text-white/60">
                       {label}
                     </span>
                   )}
@@ -169,7 +169,7 @@ export default function Footer() {
           transition={{ duration: 0.5, delay: 0.25, ease: "easeOut" }}
           className="flex flex-col items-center justify-between gap-4 border-t border-white/10 py-8 md:flex-row"
         >
-          <p className="font-body-normal text-xs text-foreground/50">
+          <p className="font-body-normal text-xs text-white/30">
             &copy; {new Date().getFullYear()} Afresource Network Ltd. All rights
             reserved.
           </p>
@@ -181,7 +181,7 @@ export default function Footer() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="font-body-normal text-xs text-foreground/60 transition-colors duration-200 hover:text-secondary/70"
+                className="font-body-normal text-xs text-white/30 transition-colors duration-200 hover:text-white/70"
               >
                 {link.label}
               </Link>
