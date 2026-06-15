@@ -1,9 +1,15 @@
-// app/contact/sections/ContactSection.tsx
 "use client";
 
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Mail, Phone, ArrowRight } from "lucide-react";
+
+const inquiryTypes = [
+  "Organizational Readiness Assessment",
+  "Workforce Transition & Integration Solutions",
+  "Organizational Performance & Capability Solutions",
+  "General Inquiry",
+];
 
 export default function ContactSection() {
   return (
@@ -50,62 +56,142 @@ export default function ContactSection() {
           >
             <form className="border border-foreground/10 p-6 md:p-10 lg:p-12">
               <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
-                {/* Full Name */}
+                {/* Full Name — required */}
                 <div className="space-y-2">
                   <label className="font-body-semibold text-[0.65rem] uppercase tracking-[0.15em] text-foreground/50">
-                    Full Name
+                    Full Name <span className="text-accent">*</span>
                   </label>
                   <input
                     type="text"
-                    placeholder="Enter your name"
+                    required
+                    placeholder="Enter your full name"
                     className="w-full border border-foreground/15 bg-transparent px-4 py-3 font-body-normal text-sm text-foreground placeholder:text-foreground/40 transition-colors duration-200 focus:border-primary focus:outline-none"
                   />
                 </div>
 
-                {/* Organization */}
+                {/* Email Address — required */}
                 <div className="space-y-2">
                   <label className="font-body-semibold text-[0.65rem] uppercase tracking-[0.15em] text-foreground/50">
-                    Organization
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Company Name"
-                    className="w-full border border-foreground/15 bg-transparent px-4 py-3 font-body-normal text-sm text-foreground placeholder:text-foreground/40 transition-colors duration-200 focus:border-primary focus:outline-none"
-                  />
-                </div>
-
-                {/* Email */}
-                <div className="space-y-2">
-                  <label className="font-body-semibold text-[0.65rem] uppercase tracking-[0.15em] text-foreground/50">
-                    Email Address
+                    Email Address <span className="text-accent">*</span>
                   </label>
                   <input
                     type="email"
+                    required
                     placeholder="email@organization.com"
                     className="w-full border border-foreground/15 bg-transparent px-4 py-3 font-body-normal text-sm text-foreground placeholder:text-foreground/40 transition-colors duration-200 focus:border-primary focus:outline-none"
                   />
                 </div>
 
-                {/* Service Interest */}
+                {/* Organization — required */}
                 <div className="space-y-2">
                   <label className="font-body-semibold text-[0.65rem] uppercase tracking-[0.15em] text-foreground/50">
-                    Service Interest
+                    Organization <span className="text-accent">*</span>
                   </label>
                   <input
                     type="text"
-                    placeholder="Strategic Advisory"
+                    required
+                    placeholder="Company or institution name"
                     className="w-full border border-foreground/15 bg-transparent px-4 py-3 font-body-normal text-sm text-foreground placeholder:text-foreground/40 transition-colors duration-200 focus:border-primary focus:outline-none"
                   />
+                </div>
+
+                {/* Job Title / Role — required */}
+                <div className="space-y-2">
+                  <label className="font-body-semibold text-[0.65rem] uppercase tracking-[0.15em] text-foreground/50">
+                    Job Title / Role <span className="text-accent">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    required
+                    placeholder="e.g. Head of People & Culture"
+                    className="w-full border border-foreground/15 bg-transparent px-4 py-3 font-body-normal text-sm text-foreground placeholder:text-foreground/40 transition-colors duration-200 focus:border-primary focus:outline-none"
+                  />
+                </div>
+
+                {/* Telephone Number — required */}
+                <div className="space-y-2">
+                  <label className="font-body-semibold text-[0.65rem] uppercase tracking-[0.15em] text-foreground/50">
+                    Telephone Number <span className="text-accent">*</span>
+                  </label>
+                  <input
+                    type="tel"
+                    required
+                    placeholder="+254 700 000 000"
+                    className="w-full border border-foreground/15 bg-transparent px-4 py-3 font-body-normal text-sm text-foreground placeholder:text-foreground/40 transition-colors duration-200 focus:border-primary focus:outline-none"
+                  />
+                </div>
+
+                {/* Location — optional */}
+                <div className="space-y-2">
+                  <label className="font-body-semibold text-[0.65rem] uppercase tracking-[0.15em] text-foreground/50">
+                    Location{" "}
+                    <span className="normal-case tracking-normal text-foreground/30">
+                      (optional)
+                    </span>
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="City, Country"
+                    className="w-full border border-foreground/15 bg-transparent px-4 py-3 font-body-normal text-sm text-foreground placeholder:text-foreground/40 transition-colors duration-200 focus:border-primary focus:outline-none"
+                  />
+                </div>
+
+                {/* How Can We Help — dropdown, full width */}
+                <div className="space-y-2 md:col-span-2">
+                  <label className="font-body-semibold text-[0.65rem] uppercase tracking-[0.15em] text-foreground/50">
+                    How Can We Help? <span className="text-accent">*</span>
+                  </label>
+                  <div className="relative">
+                    <select
+                      required
+                      defaultValue=""
+                      className="w-full appearance-none border border-foreground/15 bg-transparent px-4 py-3 font-body-normal text-sm text-foreground transition-colors duration-200 focus:border-primary focus:outline-none"
+                    >
+                      <option value="" disabled className="text-foreground/40">
+                        Select an inquiry type
+                      </option>
+                      {inquiryTypes.map((type) => (
+                        <option
+                          key={type}
+                          value={type}
+                          className="bg-background text-foreground"
+                        >
+                          {type}
+                        </option>
+                      ))}
+                    </select>
+                    {/* Custom chevron */}
+                    <div className="pointer-events-none absolute inset-y-0 right-4 flex items-center">
+                      <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        className="text-foreground/40"
+                      >
+                        <path
+                          d="M2 4l4 4 4-4"
+                          stroke="currentColor"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
                 </div>
 
                 {/* Message — full width */}
                 <div className="space-y-2 md:col-span-2">
                   <label className="font-body-semibold text-[0.65rem] uppercase tracking-[0.15em] text-foreground/50">
-                    Message
+                    Message{" "}
+                    <span className="normal-case tracking-normal text-foreground/30">
+                      (optional)
+                    </span>
                   </label>
                   <textarea
                     rows={5}
-                    placeholder="Briefly describe your inquiry..."
+                    placeholder="Briefly describe your inquiry or the challenge your organization is facing..."
                     className="w-full resize-none border border-foreground/15 bg-transparent px-4 py-3 font-body-normal text-sm text-foreground placeholder:text-foreground/40 transition-colors duration-200 focus:border-primary focus:outline-none"
                   />
                 </div>
@@ -123,7 +209,8 @@ export default function ContactSection() {
               </div>
 
               <p className="mt-6 font-body-normal text-xs text-foreground/40">
-                * All inquiries reviewed with care and discretion.
+                <span className="text-accent">*</span> Required fields. All
+                inquiries reviewed with care and discretion.
               </p>
             </form>
           </motion.div>
@@ -138,7 +225,6 @@ export default function ContactSection() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
             >
-              {/* Subtle globe watermark */}
               <div className="pointer-events-none absolute -bottom-10 -right-10 h-40 w-40 rounded-full bg-background/3" />
 
               <span className="font-body-semibold text-[0.65rem] uppercase tracking-[0.2em] text-accent">
@@ -163,6 +249,7 @@ export default function ContactSection() {
                   <Mail className="h-4 w-4 text-accent" strokeWidth={1.5} />
                   info@afresource.com
                 </a>
+
                 <a
                   href="tel:+254204400000"
                   className="flex items-center gap-3 font-body-normal text-sm text-background/70 transition-colors duration-200 hover:text-accent"
@@ -173,7 +260,7 @@ export default function ContactSection() {
               </div>
             </motion.div>
 
-            {/* Regional Hub Card — with Nairobi skyline image */}
+            {/* Regional Hub Card */}
             <motion.div
               className="relative overflow-hidden bg-[#3d3a35]"
               initial={{ opacity: 0, y: 40 }}
@@ -181,7 +268,6 @@ export default function ContactSection() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
             >
-              {/* Skyline Image */}
               <div className="relative aspect-video w-full overflow-hidden">
                 <Image
                   src="/nairobi-skyline-themed.png"
@@ -189,7 +275,6 @@ export default function ContactSection() {
                   fill
                   className="object-cover object-bottom"
                 />
-                {/* Bottom fade into card background */}
                 <div className="absolute left-6 top-6">
                   <span className="inline-block bg-background/90 px-4 py-2 font-body-semibold text-[0.65rem] uppercase tracking-[0.15em] text-[#3d3a35]">
                     Regional Hub
