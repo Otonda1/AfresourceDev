@@ -93,7 +93,7 @@ export default function Footer() {
               lasting goals.
             </p>
 
-            <p className="mt-5 font-heading-medium text-base italic text-secondary/80">
+            <p className="mt-5 font-heading-medium text-base italic text-secondary">
               People. Structure. Sustainable Growth.
             </p>
 
