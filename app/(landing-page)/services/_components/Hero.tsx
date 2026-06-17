@@ -36,7 +36,8 @@ export default function ServicesHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
         >
-          Services designed around how organizations actually work.
+          Solutions designed to strengthen organizational readiness and
+          sustainable performance.{" "}
         </motion.h1>
 
         {/* Bottom row — body copy + CTAs */}
@@ -47,9 +48,9 @@ export default function ServicesHero() {
           transition={{ duration: 0.7, delay: 0.35, ease: "easeOut" }}
         >
           <p className="max-w-md border-l-2 border-secondary/40 pl-6 font-body-normal text-base leading-relaxed text-background/70 md:text-lg">
-            Afresource helps organizations design and strengthen people systems,
-            organizational structures, and governance frameworks that support
-            clarity, consistency, and sustainable performance.
+            Afresource helps organizations assess, strengthen, and sustain the
+            people, systems, and structures required to achieve organizational
+            goals and long-term performance.
           </p>
 
           <div className="flex shrink-0 flex-col gap-3 sm:flex-row md:flex-col lg:flex-row">
