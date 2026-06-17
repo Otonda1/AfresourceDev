@@ -38,9 +38,9 @@ export default function ContactSection() {
             style={{ originX: 0 }}
           />
           <p className="mt-6 font-body-normal text-base leading-relaxed text-foreground/70 md:text-lg">
-            Whether you are seeking market entry advisory or ESG transformation
-            strategies, our specialists are prepared to facilitate your
-            Pan-African ambitions.
+            Whether your organization is preparing for growth, navigating
+            change, or strengthening organizational readiness, we&apos;d be
+            happy to start a conversation.
           </p>
         </motion.div>
 

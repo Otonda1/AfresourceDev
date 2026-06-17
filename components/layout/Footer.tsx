@@ -26,13 +26,19 @@ const contactItems = [
 export default function Footer() {
   return (
     <footer className="relative overflow-hidden bg-primary text-white">
-      {/* ── Signature background element: large ghost letterform ── */}
-      <span
+      {/* ── Signature background element: ghost A-mark ── */}
+      <div
         aria-hidden="true"
-        className="pointer-events-none absolute -right-8 -bottom-12 select-none font-heading-bold text-[22rem] leading-none text-white/[0.035] lg:text-[28rem]"
+        className="pointer-events-none absolute -right-10 -bottom-6 select-none opacity-[0.06] lg:-right-16 lg:-bottom-10"
       >
-        A
-      </span>
+        <Image
+          src="/logo/Afresource_Amark_White.png"
+          height={1281}
+          width={905}
+          alt=""
+          className="w-[320px] lg:w-[420px]"
+        />
+      </div>
 
       {/* ── Thin top accent line ── */}
       <div className="h-0.5 w-full bg-linear-to-r from-transparent via-secondary/60 to-transparent" />
@@ -96,16 +102,6 @@ export default function Footer() {
             <p className="mt-5 font-heading-medium text-base italic text-secondary">
               People. Structure. Sustainable Growth.
             </p>
-
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-              className="mt-8 inline-flex h-9 w-9 items-center justify-center rounded-lg border border-white/15 text-white/40 transition-all duration-200 hover:border-white/40 hover:text-white"
-            >
-              <MoveUpRight className="h-4 w-4" strokeWidth={1.5} />
-            </a>
           </div>
 
           {/* Company links */}
