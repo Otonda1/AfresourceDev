@@ -30,7 +30,8 @@ const solutions = [
 
 export default function HowWeHelpOrganizations() {
   return (
-    <section className="relative overflow-hidden bg-primary py-28 md:py-36 lg:py-48">
+    <section className="relative overflow-hidden bg-primary py-16 md:py-24 lg:py-32">
+      {/* spacing standardized */}
       {/* Subtle background texture — large ghost numerals */}
       <span
         aria-hidden="true"

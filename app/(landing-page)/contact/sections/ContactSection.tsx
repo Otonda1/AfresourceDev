@@ -13,7 +13,8 @@ const inquiryTypes = [
 
 export default function ContactSection() {
   return (
-    <section className="bg-background py-24 md:py-32 lg:py-40">
+    <section className="bg-background py-16 md:py-24 lg:py-32">
+      {/* spacing standardized */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -26,11 +27,11 @@ export default function ContactSection() {
           <span className="font-body-semibold text-xs uppercase tracking-[0.2em] text-accent">
             Strategic Inquiry
           </span>
-          <h1 className="mt-3 font-heading-bold text-4xl italic text-primary md:text-5xl">
+          <h1 className="mt-4 font-heading-bold text-4xl italic text-primary md:text-5xl">
             Get in Touch
           </h1>
           <motion.div
-            className="mt-5 h-[2px] w-16 bg-secondary"
+            className="mt-6 h-[2px] w-16 bg-secondary"
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
             viewport={{ once: true }}
@@ -45,7 +46,7 @@ export default function ContactSection() {
         </motion.div>
 
         {/* Main Grid */}
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-10">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-8">
           {/* Left — Form */}
           <motion.div
             className="lg:col-span-7"

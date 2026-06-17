@@ -69,14 +69,15 @@ const detailedServices = [
 
 export default function DetailedServices() {
   return (
-    <section className="bg-background py-24 md:py-32 lg:py-40">
+    <section className="bg-background py-16 md:py-24 lg:py-32">
+      {/* spacing standardized */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {detailedServices.map((service, index) => (
           <motion.div
             key={service.number}
-            className={`grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16 ${
+            className={`grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-8 ${
               index !== 0
-                ? "mt-24 border-t border-foreground/10 pt-24 md:mt-32 md:pt-32"
+                ? \"mt-16 border-t border-foreground/10 pt-16 md:mt-24 md:pt-24\"
                 : ""
             }`}
             initial={{ opacity: 0, y: 40 }}

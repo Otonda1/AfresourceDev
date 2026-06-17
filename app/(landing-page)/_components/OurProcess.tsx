@@ -31,7 +31,8 @@ const steps = [
 
 export default function OurProcess() {
   return (
-    <section className="bg-primary py-24 md:py-32 lg:py-40">
+    <section className="bg-primary py-16 md:py-24 lg:py-32">
+      {/* spacing standardized */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -50,7 +51,7 @@ export default function OurProcess() {
           </h2>
 
           <motion.div
-            className="mt-5 h-0.5 w-16 bg-accent"
+            className="mt-6 h-0.5 w-16 bg-accent"
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
             viewport={{ once: true }}
@@ -86,7 +87,7 @@ export default function OurProcess() {
                     {step.title}
                   </span>
 
-                  <p className="mt-5 font-body-normal text-sm leading-relaxed text-background/60 md:text-base">
+                  <p className="mt-6 font-body-normal text-sm leading-relaxed text-background/60 md:text-base">
                     {step.description}
                   </p>
                 </div>

@@ -4,10 +4,11 @@ import { motion } from "framer-motion";
 
 export default function ExperienceSpecialization() {
   return (
-    <section className="bg-background py-24 md:py-32 lg:py-40">
+    <section className="bg-background py-16 md:py-24 lg:py-32">
+      {/* spacing standardized */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Heading + Text Row */}
-        <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-16">
+        <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-12 lg:gap-8">
           {/* Left Column — Heading */}
           <motion.div
             className="lg:col-span-4"
@@ -23,7 +24,7 @@ export default function ExperienceSpecialization() {
               Experience & Specialization
             </h2>
             <motion.div
-              className="mt-5 h-0.5 w-16 bg-secondary"
+              className="mt-6 h-0.5 w-16 bg-secondary"
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
               viewport={{ once: true }}
@@ -40,7 +41,7 @@ export default function ExperienceSpecialization() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
           >
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-12">
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-8">
               <p className="font-body-normal text-base leading-relaxed text-foreground/80 md:text-lg">
                 Afresource&apos;s perspective is shaped by practical experience
                 across corporate and development environments. This includes

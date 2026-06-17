@@ -21,7 +21,7 @@ export default function InsightsHero() {
         </motion.div>
 
         {/* Asymmetric grid: 7/5 split */}
-        <div className="mt-10 grid grid-cols-1 gap-12 lg:grid-cols-[7fr_5fr] lg:gap-0">
+        <div className="mt-10 grid grid-cols-1 gap-8 lg:grid-cols-[7fr_5fr] lg:gap-8">
           {/* Left — text */}
           <div className="flex flex-col justify-between gap-12 lg:pr-20">
             <motion.h1

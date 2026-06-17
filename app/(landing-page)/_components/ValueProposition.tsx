@@ -29,7 +29,7 @@ export default function ValueProposition() {
   return (
     <section className="bg-background py-24 md:py-32 lg:py-40">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 items-center gap-20 lg:grid-cols-2">
+        <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2">
           {/* Content */}
           <div>
             <motion.div

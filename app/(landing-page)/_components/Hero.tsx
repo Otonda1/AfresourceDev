@@ -23,7 +23,9 @@ export default function Hero({ data }: HeroProps) {
   return (
     <section className="bg-background">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 items-center gap-12 py-16 md:py-24 lg:grid-cols-2 lg:gap-16 lg:py-32">
+        {/* spacing standardized */}
+        <div className="grid grid-cols-1 items-center gap-8 py-24 md:py-32 lg:grid-cols-2 lg:gap-8 lg:py-40">
+          {/* spacing standardized */}
           {/* Left Column — Content */}
           <div className="flex flex-col items-start space-y-8">
             {/* Badge */}

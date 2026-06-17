@@ -23,7 +23,8 @@ const scenarios = [
 
 export default function WhoBenefits() {
   return (
-    <section className="bg-[#0f1f15] py-24 md:py-32 lg:py-40">
+    <section className="bg-[#0f1f15] py-16 md:py-24 lg:py-32">
+      {/* spacing standardized */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           className="mx-auto mb-16 max-w-3xl text-center md:mb-20"
@@ -63,7 +64,7 @@ export default function WhoBenefits() {
                   {scenario.title}
                 </h3>
 
-                <p className="mt-5 font-body-normal text-base leading-relaxed text-background/65">
+                <p className="mt-6 font-body-normal text-base leading-relaxed text-background/65">
                   {scenario.description}
                 </p>
               </div>

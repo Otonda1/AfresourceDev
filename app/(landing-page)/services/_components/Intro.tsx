@@ -6,10 +6,11 @@ export default function Intro() {
   return (
     <section
       id="approach"
-      className="border-t border-foreground/10 bg-background py-24 md:py-32 lg:py-40"
+      className="border-t border-foreground/10 bg-background py-16 md:py-24 lg:py-32"
     >
+      {/* spacing standardized */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-8">
           <motion.div
             className="lg:col-span-6"
             initial={{ opacity: 0, y: 30 }}
@@ -21,7 +22,7 @@ export default function Intro() {
               Our Services
             </span>
             <motion.div
-              className="mt-5 h-0.5 w-16 bg-secondary"
+              className="mt-6 h-0.5 w-16 bg-secondary"
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
               viewport={{ once: true }}

@@ -15,7 +15,8 @@ const supportingPoints = [
 
 export default function SignatureArea() {
   return (
-    <section className="relative overflow-hidden bg-primary py-24 md:py-32 lg:py-40">
+    <section className="relative overflow-hidden bg-primary py-16 md:py-24 lg:py-32">
+      {/* spacing standardized */}
       {/* Subtle geometric watermark */}
       <div className="pointer-events-none absolute -right-20 -top-20 h-96 w-96 opacity-[0.03]">
         <svg
@@ -34,7 +35,7 @@ export default function SignatureArea() {
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-20">
+        <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -62,7 +63,7 @@ export default function SignatureArea() {
               clarity and consistency.
             </p>
 
-            <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
               {supportingPoints.map((point, index) => (
                 <motion.div
                   key={point}

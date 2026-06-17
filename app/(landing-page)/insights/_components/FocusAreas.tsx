@@ -46,7 +46,8 @@ const areas = [
 
 export default function FocusAreas() {
   return (
-    <section className="bg-background py-24 md:py-32 lg:py-40">
+    <section className="bg-background py-16 md:py-24 lg:py-32">
+      {/* spacing standardized */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           className="mb-16 flex items-center gap-6 md:mb-20"

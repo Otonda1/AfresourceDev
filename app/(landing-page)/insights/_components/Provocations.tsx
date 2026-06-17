@@ -33,7 +33,8 @@ const provocations = [
 
 export default function Provocations() {
   return (
-    <section className="border-y border-foreground/10 bg-primaryAccent/20 py-24 md:py-32 lg:py-40">
+    <section className="border-y border-foreground/10 bg-primaryAccent/20 py-16 md:py-24 lg:py-32">
+      {/* spacing standardized */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:gap-20">
           {/* Left — Sticky intro */}

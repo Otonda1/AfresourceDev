@@ -48,7 +48,8 @@ const contexts = [
 
 export default function ContextCards() {
   return (
-    <section className="border-y border-foreground/10 bg-primaryAccent/20 py-24 md:py-32 lg:py-40">
+    <section className="border-y border-foreground/10 bg-primaryAccent/20 py-16 md:py-24 lg:py-32">
+      {/* spacing standardized */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.h2
           className="mb-16 text-center font-heading-bold text-3xl italic text-primary md:mb-20 md:text-4xl"
