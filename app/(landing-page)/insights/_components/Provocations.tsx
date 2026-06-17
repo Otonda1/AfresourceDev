@@ -46,7 +46,7 @@ export default function Provocations() {
           >
             <div className="lg:sticky lg:top-32">
               <span className="font-body-semibold text-xs uppercase tracking-[0.2em] text-accent">
-                Provocations
+                Viewpoints
               </span>
               <h2 className="mt-4 font-heading-bold text-3xl italic text-primary md:text-4xl">
                 Questions that reveal what most organizations overlook.
