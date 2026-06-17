@@ -46,8 +46,9 @@ export default function Pillars() {
             Afresource Organizational Readiness Framework
           </h2>
           <p className="mt-6 font-body-normal text-base text-background/70 md:text-lg">
-            Our advisory approach evaluates and strengthens organizations across
-            three interdependent dimensions.
+            The Afresource Organizational Readiness Framework is built on three
+            interconnected pillars that support sustainable organizational
+            performance.
           </p>
         </motion.div>
 

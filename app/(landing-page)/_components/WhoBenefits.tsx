@@ -15,9 +15,9 @@ const scenarios = [
       "Organizations navigating change, restructuring, workforce mobility, leadership shifts, or evolving operational requirements.",
   },
   {
-    title: "Organizations Seeking Greater Consistency",
+    title: "Regional & Multi-Country Organizations",
     description:
-      "Organizations looking to strengthen accountability, performance, onboarding, employee experience, and decision-making processes.",
+      "Organizations operating across multiple locations that need consistent yet adaptable people systems, governance frameworks, mobility processes, and decision-making structures.",
   },
 ];
 

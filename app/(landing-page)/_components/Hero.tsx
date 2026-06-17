@@ -38,13 +38,13 @@ export default function Hero({ data }: HeroProps) {
 
             {/* Heading */}
             <motion.h1
-              className="font-heading-bold text-4xl italic leading-[1.1] text-primary md:text-4xl lg:text-[3rem] xl:text-[3.5rem]"
+              className="font-heading-bold text-4xl italic leading-[1.1] text-primary md:text-4xl lg:text-[3rem] xl:text-[4rem]"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
             >
-              Designing the people systems that support organizational
-              readiness, performance, and sustainable growth.
+              Strengthening the people, systems, and structures that enable
+              organizational readiness.
             </motion.h1>
 
             {/* Description */}

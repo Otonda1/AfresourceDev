@@ -30,7 +30,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
             >
-              Institutional Advisory
+              Organizational Readiness Advisory
             </motion.span>
 
             <motion.h1
