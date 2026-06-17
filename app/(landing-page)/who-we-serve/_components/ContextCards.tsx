@@ -9,9 +9,9 @@ const contexts = [
     description:
       "Scaling rapidly but lacking the foundational HR architecture to support an expanding team.",
     needs: [
-      "Structured onboarding",
-      "Role clarity & descriptions",
-      "Scalable performance systems",
+      "Workforce capability growth",
+      "Clear organizational structures",
+      "Scalable performance practices",
     ],
   },
   {
@@ -19,9 +19,9 @@ const contexts = [
     description:
       "Undergoing leadership changes, mergers, or significant strategic shifts requiring realignment.",
     needs: [
-      "Transition planning",
-      "Staff mobility & mapping",
-      "Reporting clarity",
+      "Change readiness",
+      "Workforce transition support",
+      "Organizational alignment",
     ],
   },
   {
@@ -29,9 +29,9 @@ const contexts = [
     description:
       "NGOs and impact organizations seeking to balance programmatic urgency with institutional stability.",
     needs: [
-      "Practical governance",
-      "Consistent HR processes",
-      "Alignment to mission",
+      "Governance effectiveness",
+      "Organizational sustainability",
+      "Mission alignment",
     ],
   },
   {
@@ -39,9 +39,9 @@ const contexts = [
     description:
       "Operating across borders and struggling to maintain unified standards while respecting local contexts.",
     needs: [
-      "Cross-border mobility policies",
-      "Pan-African consistency",
-      "Multi-tier governance",
+      "Cross-border workforce coordination",
+      "Consistent operating practices",
+      "Multi-country organizational alignment",
     ],
   },
 ];
