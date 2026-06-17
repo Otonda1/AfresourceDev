@@ -6,6 +6,9 @@ import Link from "next/link";
 export default function AboutCTA() {
   return (
     <section className="relative overflow-hidden bg-[#0f1f15] py-24 md:py-32 lg:py-40">
+      {/* Subtle radial glow center */}
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.04)_0%,transparent_70%)]" />
+
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.03)_0%,transparent_70%)]" />
 
       <div className="relative mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">

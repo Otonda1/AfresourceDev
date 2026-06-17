@@ -5,7 +5,10 @@ import Link from "next/link";
 
 export default function WhoWeServeCTA() {
   return (
-    <section className="bg-primary py-24 md:py-32 lg:py-40">
+    <section className=" relative overflow-hidden bg-primary py-24 md:py-32 lg:py-40">
+      {/* Subtle radial glow center */}
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.04)_0%,transparent_70%)]" />
+
       <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
         <motion.h2
           className="font-heading-bold text-3xl italic text-background md:text-4xl lg:text-[2.75rem] lg:leading-[1.15]"
