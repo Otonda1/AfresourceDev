@@ -43,7 +43,7 @@ export default function ValueProposition() {
               </span>
 
               <h2 className="mt-4 font-heading-bold text-4xl italic text-primary md:text-5xl">
-                Readiness is built through people, systems, and structure
+                Readiness is built through people, systems, and structures
                 working in alignment.
               </h2>
 

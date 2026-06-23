@@ -104,18 +104,6 @@ export default function WhatShapesOurPerspective() {
                 evolve, and navigate change.
               </p>
             </div>
-
-            <div className="mt-8 flex items-center gap-4">
-              <div className="h-px flex-1 bg-foreground/10" />
-              <div className="text-right">
-                <p className="font-heading-medium text-base text-foreground">
-                  Annette Otonda
-                </p>
-                <p className="font-body-normal text-sm italic text-foreground/50">
-                  Managing Partner
-                </p>
-              </div>
-            </div>
           </motion.div>
 
           {/* Right: Experience Cards */}
