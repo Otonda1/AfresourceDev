@@ -17,12 +17,10 @@ export default async function Home() {
     slug: "homepage",
   });
 
-  console.log(hompage.hero);
-
   return (
     <>
       <main className="">
-        <Hero data={hompage.hero} />
+        <Hero />
         <OurPerspective />
         <Capabilities />
         <ValueProposition />

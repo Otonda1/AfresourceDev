@@ -19,7 +19,7 @@ interface HeroProps {
   };
 }
 
-export default function Hero({ data }: HeroProps) {
+export default function Hero() {
   return (
     <section className="bg-background">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
